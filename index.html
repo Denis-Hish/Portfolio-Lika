@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Лідія Андрійчук - Психолог</title>
+
+	<!-- Шрифты Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+		rel="stylesheet">
+
+	<!-- Google Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="styles.css">
+
+	<!-- i18n библиотека -->
+	<script src="i18n.js"></script>
+</head>
+
+<body>
+	<!-- Шапка сайта -->
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<div class="logo">
+					<span data-i18n="hero.name">Лідія Андрійчук</span>
+				</div>
+
+				<ul class="nav-menu" id="navMenu">
+					<li><a href="#home" class="nav-link" data-i18n="nav.home">Головна</a></li>
+					<li><a href="#about" class="nav-link" data-i18n="nav.about">Про мене</a></li>
+					<li><a href="#education" class="nav-link" data-i18n="nav.education">Освіта</a></li>
+					<li><a href="#services" class="nav-link" data-i18n="nav.services">Послуги</a></li>
+					<li><a href="#contacts" class="nav-link" data-i18n="nav.contacts">Контакти</a></li>
+				</ul>
+
+				<div class="nav-language">
+					<!-- Переключатель языков -->
+					<div class="language-switcher">
+						<button class="lang-btn active" data-lang="uk">UA</button>
+						<button class="lang-btn" data-lang="pl">PL</button>
+						<button class="lang-btn" data-lang="en">EN</button>
+					</div>
+					<button class="nav-toggle" id="navToggle">
+						<span class="material-icons">menu</span>
+					</button>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Главная страница -->
+	<section id="home" class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="hero-text">
+					<h1 class="hero-title" data-i18n="hero.name">Лідія Андрійчук</h1>
+					<p class="hero-subtitle" data-i18n="hero.subtitle">Клінічний психолог</p>
+					<p class="hero-description" data-i18n="hero.description">
+						Допомагаю знайти внутрішню гармонію та впоратися з життєвими труднощами.
+						Індивідуальний підхід до кожного клієнта, заснований на доказових методах психотерапії.
+					</p>
+					<div class="hero-buttons">
+						<a href="#contacts" class="btn btn-primary" data-i18n="hero.btnPrimary">Записатися на консультацію</a>
+						<a href="#services" class="btn btn-secondary" data-i18n="hero.btnSecondary">Дізнатися детальніше</a>
+					</div>
+				</div>
+				<div class="hero-image">
+					<div class="image-placeholder">
+						<img src="./img/20251012_130814.jpg" alt="Hero image">
+						<!-- <span class="material-icons">person</span>
+						<p data-i18n="placeholders.heroImage">Фото психолога</p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Обо мне -->
+	<section id="about" class="about">
+		<div class="container">
+			<div class="about-content">
+				<div class="about-image">
+					<div class="image-placeholder">
+						<img src="./img/20251106_140427.jpg" alt="About image">
+						<!-- <span class="material-icons">psychology</span>
+						<p data-i18n="placeholders.aboutImage">Робоче фото</p> -->
+					</div>
+				</div>
+				<div class="about-text">
+					<h2 class="section-title" data-i18n="about.title">Про мене</h2>
+					<div class="about-description">
+						<p data-i18n="about.paragraph1">
+							Вітаю! Мене звати Лідія Андрійчук, і я клінічний психолог з понад 8-річним досвідом роботи.
+							Моя практика заснована на принципах гуманістичної та когнітивно-поведінкової терапії.
+						</p>
+						<p data-i18n="about.paragraph2">
+							Я вірю, що кожна людина володіє внутрішніми ресурсами для змін. Моє завдання – допомогти вам
+							їх виявити та навчитися використовувати. У своїй роботі я створюю безпечний простір, де ви
+							можете відкрито говорити про свої переживання та знаходити шляхи до вирішення.
+						</p>
+						<p data-i18n="about.paragraph3">
+							Працюю з тривожними розладами, депресією, особистісними кризами, проблемами у стосунках
+							та професійним вигоранням. Консультую онлайн та офлайн.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Образование -->
+	<section id="education" class="education">
+		<div class="container">
+			<h2 class="section-title" data-i18n="education.title">Освіта та кваліфікації</h2>
+			<div class="accordion">
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span class="material-icons accordion-icon">school</span>
+						<h3 data-i18n="education.higher.title">Вища освіта</h3>
+						<span class="material-icons accordion-toggle">expand_more</span>
+					</div>
+					<div class="accordion-content" data-i18n-html="education.higher.content">
+						<p>
+							<strong>Київський національний університет імені Тараса Шевченка</strong><br>
+							Спеціальність: Клінічна психологія<br>
+							Роки навчання: 2010-2016<br>
+							Кваліфікація: Магістр психології
+						</p>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span class="material-icons accordion-icon">workspace_premium</span>
+						<h3 data-i18n="education.certificates.title">Сертифікати та курси</h3>
+						<span class="material-icons accordion-toggle">expand_more</span>
+					</div>
+					<div class="accordion-content" data-i18n-html="education.certificates.content">
+						<ul>
+							<li>Когнітивно-поведінкова терапія (CBT), сертифікат EABCT, 2017</li>
+							<li>Схема-терапія, International Schema Therapy Institute, 2019</li>
+							<li>Робота з травмою та ПТСР, EMDR-терапія, рівень 1-2, 2020</li>
+							<li>Супервізія та професійний розвиток (ongoing)</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span class="material-icons accordion-icon">psychology</span>
+						<h3 data-i18n="education.professional.title">Професійна діяльність</h3>
+						<span class="material-icons accordion-toggle">expand_more</span>
+					</div>
+					<div class="accordion-content" data-i18n-html="education.professional.content">
+						<p>
+							<strong>Приватна практика</strong> (2018 - теперішній час)<br>
+							Індивідуальне психологічне консультування дорослих
+						</p>
+						<p>
+							<strong>Психологічний центр "Гармонія"</strong> (2016-2018)<br>
+							Психолог-консультант, робота з клієнтами різних вікових груп
+						</p>
+					</div>
+				</div>
+
+				<div class="accordion-item">
+					<div class="accordion-header">
+						<span class="material-icons accordion-icon">card_membership</span>
+						<h3 data-i18n="education.membership.title">Членство в організаціях</h3>
+						<span class="material-icons accordion-toggle">expand_more</span>
+					</div>
+					<div class="accordion-content" data-i18n-html="education.membership.content">
+						<ul>
+							<li>Українська асоціація когнітивно-поведінкової терапії</li>
+							<li>Європейська асоціація психотерапії (EAP)</li>
+							<li>Регулярна супервізія у сертифікованого супервізора</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Услуги -->
+	<section id="services" class="services">
+		<div class="container">
+			<h2 class="section-title" data-i18n="services.title">Мої послуги</h2>
+			<div class="slider-container">
+				<button class="slider-btn slider-btn-prev" id="sliderPrev">
+					<span class="material-icons">chevron_left</span>
+				</button>
+				<div class="slider">
+					<div class="slider-track" id="sliderTrack">
+						<!-- Карточка 1 -->
+						<div class="service-card">
+							<span class="material-icons service-icon">favorite</span>
+							<h3 data-i18n="services.individual.title">Індивідуальна консультація</h3>
+							<p data-i18n="services.individual.description">
+								Особиста зустріч один на один для опрацювання ваших запитів.
+								Тривалість сеансу 50-60 хвилин.
+							</p>
+							<div class="service-price" data-i18n="services.individual.price">від 1500 грн</div>
+						</div>
+
+						<!-- Карточка 2 -->
+						<div class="service-card">
+							<span class="material-icons service-icon">laptop</span>
+							<h3 data-i18n="services.online.title">Онлайн-консультація</h3>
+							<p data-i18n="services.online.description">
+								Зручний формат для тих, хто віддає перевагу консультуватися
+								з дому або знаходиться в іншому місті.
+							</p>
+							<div class="service-price" data-i18n="services.online.price">від 1200 грн</div>
+						</div>
+
+						<!-- Карточка 3 -->
+						<div class="service-card">
+							<span class="material-icons service-icon">groups</span>
+							<h3 data-i18n="services.couple.title">Парна терапія</h3>
+							<p data-i18n="services.couple.description">
+								Робота з парами для покращення комунікації,
+								вирішення конфліктів та зміцнення стосунків.
+							</p>
+							<div class="service-price" data-i18n="services.couple.price">від 2000 грн</div>
+						</div>
+
+						<!-- Карточка 4 -->
+						<div class="service-card">
+							<span class="material-icons service-icon">auto_stories</span>
+							<h3 data-i18n="services.longterm.title">Довгострокова терапія</h3>
+							<p data-i18n="services.longterm.description">
+								Глибока опрацювання комплексних психологічних проблем.
+								Пакети від 10 сеансів зі знижкою.
+							</p>
+							<div class="service-price" data-i18n="services.longterm.price">Індивідуально</div>
+						</div>
+
+						<!-- Карточка 5 -->
+						<div class="service-card">
+							<span class="material-icons service-icon">crisis_alert</span>
+							<h3 data-i18n="services.crisis.title">Кризова допомога</h3>
+							<p data-i18n="services.crisis.description">
+								Екстрена психологічна підтримка в гострих
+								життєвих ситуаціях. Запис протягом 24 годин.
+							</p>
+							<div class="service-price" data-i18n="services.crisis.price">від 1800 грн</div>
+						</div>
+					</div>
+				</div>
+				<button class="slider-btn slider-btn-next" id="sliderNext">
+					<span class="material-icons">chevron_right</span>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Контакты -->
+	<section id="contacts" class="contacts">
+		<div class="container">
+			<h2 class="section-title" data-i18n="contacts.title">Контакти</h2>
+			<div class="contacts-content">
+				<div class="contacts-info">
+					<p class="contacts-text" data-i18n="contacts.text">
+						Буду рада відповісти на ваші запитання та підібрати зручний час для зустрічі.
+						Ви можете зв'язатися зі мною будь-яким зручним способом.
+					</p>
+					<div class="contact-item">
+						<span class="material-icons">email</span>
+						<div>
+							<strong data-i18n="contacts.email">Email</strong>
+							<p><a href="mailto:lidia.andriychuk@example.com">lidia.andriychuk@example.com</a></p>
+						</div>
+					</div>
+					<div class="contact-item">
+						<span class="material-icons">phone</span>
+						<div>
+							<strong data-i18n="contacts.phone">Телефон</strong>
+							<p><a href="tel:+380501234567">+38 (050) 123-45-67</a></p>
+						</div>
+					</div>
+					<div class="contact-item">
+						<span class="material-icons">schedule</span>
+						<div>
+							<strong data-i18n="contacts.schedule">Режим роботи</strong>
+							<p data-i18n-html="contacts.scheduleTime">Пн-Пт: 10:00 - 20:00<br>Сб: 10:00 - 16:00</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contacts-form">
+					<form id="contactForm">
+						<div class="form-group">
+							<input type="text" id="name" name="name" required placeholder=" ">
+							<label for="name" data-i18n="contacts.form.name">Ваше ім'я</label>
+						</div>
+						<div class="form-group">
+							<input type="email" id="email" name="email" required placeholder=" ">
+							<label for="email" data-i18n="contacts.form.email">Email</label>
+						</div>
+						<div class="form-group">
+							<input type="tel" id="phone" name="phone" placeholder=" ">
+							<label for="phone" data-i18n="contacts.form.phone">Телефон (необов'язково)</label>
+						</div>
+						<div class="form-group">
+							<textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+							<label for="message" data-i18n="contacts.form.message">Ваше повідомлення</label>
+						</div>
+						<button type="submit" class="btn btn-primary" data-i18n="contacts.form.submit">Надіслати
+							повідомлення</button>
+						<div id="formMessage" class="form-message"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-text">
+					<p data-i18n="footer.copyright">&copy; 2026 Лідія Андрійчук. Всі права захищені.</p>
+					<p class="footer-note" data-i18n="footer.note">Конфіденційність та професійна етика гарантовані</p>
+				</div>
+				<div class="footer-links">
+					<a href="#home" data-i18n="nav.home">Головна</a>
+					<a href="#about" data-i18n="nav.about">Про мене</a>
+					<a href="#services" data-i18n="nav.services">Послуги</a>
+					<a href="#contacts" data-i18n="nav.contacts">Контакти</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Кнопка "Вверх" -->
+	<button id="scrollToTop" class="scroll-to-top" aria-label="Вернуться наверх">
+		<span class="material-icons">arrow_upward</span>
+	</button>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
