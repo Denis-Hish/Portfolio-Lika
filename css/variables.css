@@ -1,0 +1,59 @@
+:root {
+  --font-title: 'Playfair Display', serif;
+  --font-text: 'Inter', sans-serif;
+
+  /* Цветовая палитра Quiet Luxury */
+  --color-primary: #9badb7; /* Muted Blue */
+  --color-secondary: #e8ddd3; /* Soft Beige */
+
+  --color-text-dark: #2c2c2c; /* Темный для текста */
+  --color-text-light: #5a5a5a; /* Светлее для вторичного текста */
+
+  --color-white: #fdfdfb;
+  --color-background: #f8f6f3;
+
+  --transition: all 0.3s ease-in-out;
+
+  --rounded-md: 8px;
+  --rounded-sm: 6px;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}

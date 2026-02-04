@@ -1,0 +1,32 @@
+{
+  "name": {
+    "uk": "Лідія Андрійчук",
+    "pl": "Lidia Andrijczuk",
+    "en": "Lidia Andriychuk"
+  },
+  "first-name": {
+    "uk": "Лідія",
+    "pl": "Lidia",
+    "en": "Lidia"
+  },
+  "second-name": {
+    "uk": "Андрійчук",
+    "pl": "Andriychuk",
+    "en": "Andriychuk"
+  },
+  "main-page": {
+    "uk": "Головна сторінка",
+    "pl": "Strona główna",
+    "en": "Main page"
+  },
+  "about": {
+    "uk": "Про мене",
+    "pl": "O mnie",
+    "en": "About me"
+  },
+  "services": {
+    "uk": "Послуги",
+    "pl": "Usługi",
+    "en": "Services"
+  }
+}
