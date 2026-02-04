@@ -171,6 +171,10 @@ button {
       }
     }
 
+    .nav-language.mobile {
+      display: none;
+    }
+
     .nav-toggle-btn {
       --btn-size: 32px;
       --line-height: 2px;
@@ -258,8 +262,8 @@ button {
         width: 100%;
         right: -100%;
         min-height: 100dvh;
-        /* background-color: var(--color-white); */
-        background-color: #f06;
+        background-color: var(--color-white);
+        /* background-color: #f06; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -269,10 +273,20 @@ button {
         &.active {
           right: 0;
         }
+
+        .nav-link {
+          font-size: 1.5em;
+        }
       }
 
       .nav-language {
-        /* display: none; */
+        display: none;
+      }
+
+      .nav-language.mobile {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
       }
 
       .nav-toggle-btn {
@@ -281,22 +295,22 @@ button {
       }
     }
   }
+}
 
-  /*! ---------- DELETE ---------- !*/
+/*! ---------- DELETE ---------- !*/
 
-  .colors {
+.colors {
+  display: flex;
+  gap: 2rem;
+
+  .box {
     display: flex;
-    gap: 2rem;
-
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-      margin-bottom: 2rem;
-      min-height: 200px;
-      border: 1px solid var(--color-primary);
-      border-radius: var(--rounded-sm);
-    }
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 2rem;
+    min-height: 200px;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--rounded-sm);
   }
 }
