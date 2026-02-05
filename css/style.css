@@ -270,7 +270,7 @@ button {
         transition: right var(--duration);
         z-index: 99;
 
-        &.active {
+        &.open {
           right: 0;
         }
 

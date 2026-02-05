@@ -1,32 +1,20 @@
 {
-  "name": {
-    "uk": "Лідія Андрійчук",
-    "pl": "Lidia Andrijczuk",
-    "en": "Lidia Andriychuk"
+  "uk": {
+    "translation": {
+      "nav.home": "Головна",
+      "nav.about": "Про мене",
+      "nav.education": "Освіта",
+      "nav.services": "Послуги",
+      "nav.contacts": "Контакти"
+    }
   },
-  "first-name": {
-    "uk": "Лідія",
-    "pl": "Lidia",
-    "en": "Lidia"
-  },
-  "second-name": {
-    "uk": "Андрійчук",
-    "pl": "Andriychuk",
-    "en": "Andriychuk"
-  },
-  "main-page": {
-    "uk": "Головна сторінка",
-    "pl": "Strona główna",
-    "en": "Main page"
-  },
-  "about": {
-    "uk": "Про мене",
-    "pl": "O mnie",
-    "en": "About me"
-  },
-  "services": {
-    "uk": "Послуги",
-    "pl": "Usługi",
-    "en": "Services"
+  "pl": {
+    "translation": {
+      "nav.home": "Główna",
+      "nav.about": "O mnie",
+      "nav.education": "Edukacja",
+      "nav.services": "Usługi",
+      "nav.contacts": "Kontakty"
+    }
   }
 }
