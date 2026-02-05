@@ -67,8 +67,8 @@ a {
   color: inherit;
 }
 
-img {
-}
+/* img {
+} */
 
 section {
   min-height: 100dvh;
@@ -356,8 +356,8 @@ header.header {
   }
 
   /* ---------- FOOTER ---------- */
-  footer.footer {
-  }
+  /* footer.footer {
+  } */
 
   .scroll-to-top {
     --btn-size: 50px;
@@ -402,53 +402,53 @@ header.header {
       }
     }
   }
+}
 
-  /* ---------- MEDIA QUERIES ---------- */
-  /* Tablet */
-  @media (max-width: 1024px) {
-  }
+/* ---------- MEDIA QUERIES ---------- */
+/* Tablet */
+@media (max-width: 1024px) {
+}
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    .header {
-      .nav {
-        .nav-menu {
-          position: fixed;
-          top: 0;
-          width: 100%;
-          right: -100%;
-          min-height: 100dvh;
-          background-color: var(--color-white);
-          /* background-color: #f06; */
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          transition: right var(--duration);
-          z-index: 99;
+/* Mobile */
+@media (max-width: 767px) {
+  header.header {
+    .nav {
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        min-height: 100dvh;
+        background-color: var(--color-white);
+        /* background-color: #f06; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--duration);
+        z-index: 99;
 
-          &.open {
-            right: 0;
-          }
-
-          .nav-link {
-            font-size: 1.5em;
-          }
+        &.open {
+          right: 0;
         }
 
-        .nav-language {
-          display: none;
+        .nav-link {
+          font-size: 1.5em;
         }
+      }
 
-        .nav-language.mobile {
-          display: flex;
-          position: absolute;
-          bottom: 40px;
-        }
+      .nav-language {
+        display: none;
+      }
 
-        .nav-toggle-btn {
-          display: block;
-          z-index: 100;
-        }
+      .nav-language.mobile {
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+      }
+
+      .nav-toggle-btn {
+        display: block;
+        z-index: 100;
       }
     }
   }
