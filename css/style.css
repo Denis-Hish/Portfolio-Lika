@@ -186,76 +186,9 @@ header.header {
       }
     }
 
-    .nav-language.mobile {
-      display: none;
-    }
-
+    .nav-language.mobile,
     .nav-toggle-btn {
-      --btn-size: 32px;
-      --line-height: 2px;
-      --line-space: 6px;
-
       display: none;
-      position: relative;
-      width: var(--btn-size);
-      height: var(--btn-size);
-      cursor: pointer;
-
-      span:nth-child(1),
-      span:nth-child(2),
-      span:nth-child(3) {
-        position: absolute;
-        right: 0;
-        height: var(--line-height);
-        background-color: var(--color-text-dark);
-        border-radius: 50px;
-        transition: all var(--duration);
-
-        &:nth-child(1) {
-          top: var(--line-space);
-          width: 100%;
-        }
-
-        &:nth-child(2) {
-          top: 50%;
-          transform: translateY(-50%);
-          width: 75%;
-        }
-
-        &:nth-child(3) {
-          bottom: var(--line-space);
-          width: 50%;
-        }
-      }
-
-      /* &:hover {
-        span:nth-child(1),
-        span:nth-child(2),
-        span:nth-child(3) {
-          width: 100%;
-        }
-      } */
-
-      &.active {
-        span:nth-child(1) {
-          right: -50%;
-          top: 50%;
-          transform: rotate(-45deg) translateX(-50%);
-          transform-origin: left center;
-        }
-        span:nth-child(2) {
-          width: 0;
-          right: 50%;
-          opacity: 0;
-        }
-        span:nth-child(3) {
-          right: 50%;
-          top: 50%;
-          transform: rotate(45deg) translateX(50%);
-          transform-origin: right center;
-          width: 100%;
-        }
-      }
     }
   }
 }
@@ -429,6 +362,7 @@ header.header {
 
         &.open {
           right: 0;
+          background-color: var(--color-background);
         }
 
         .nav-link {
@@ -447,8 +381,74 @@ header.header {
       }
 
       .nav-toggle-btn {
+        --btn-size: 32px;
+        --line-height: 2px;
+        --line-space: 6px;
+
         display: block;
+        position: relative;
+        width: var(--btn-size);
+        height: var(--btn-size);
         z-index: 100;
+        cursor: pointer;
+
+        span:nth-child(1),
+        span:nth-child(2),
+        span:nth-child(3) {
+          position: absolute;
+          right: 0;
+          height: var(--line-height);
+          background-color: var(--color-text-dark);
+          border-radius: 50px;
+          transition: all var(--duration);
+
+          &:nth-child(1) {
+            top: var(--line-space);
+            width: 100%;
+          }
+
+          &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75%;
+          }
+
+          &:nth-child(3) {
+            bottom: var(--line-space);
+            width: 50%;
+          }
+        }
+
+        /* &:hover {
+        span:nth-child(1),
+        span:nth-child(2),
+        span:nth-child(3) {
+          width: 100%;
+        }
+      } */
+
+        &.open {
+          span:nth-child(1) {
+            right: -50%;
+            top: 50%;
+            transform: rotate(-45deg) translateX(-50%);
+            transform-origin: left center;
+          }
+
+          span:nth-child(2) {
+            width: 0;
+            right: 50%;
+            opacity: 0;
+          }
+
+          span:nth-child(3) {
+            right: 50%;
+            top: 50%;
+            transform: rotate(45deg) translateX(50%);
+            transform-origin: right center;
+            width: 100%;
+          }
+        }
       }
     }
   }
