@@ -1,6 +1,8 @@
 {
   "uk": {
     "translation": {
+      "site.title": "Лідія Андрійчук - Психолог",
+      "fullname": "Лідія Андрійчук",
       "nav.home": "Головна",
       "nav.about": "Про мене",
       "nav.education": "Освіта",
@@ -10,6 +12,8 @@
   },
   "pl": {
     "translation": {
+      "site.title": "Lidia Andrijczuk - Psycholog",
+      "fullname": "Lidia Andrijczuk",
       "nav.home": "Główna",
       "nav.about": "O mnie",
       "nav.education": "Edukacja",

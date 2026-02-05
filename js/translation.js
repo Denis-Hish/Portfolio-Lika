@@ -6,6 +6,7 @@ fetch('./language/lang.json')
     i18next
       .use(i18nextBrowserLanguageDetector)
       .init({
+        showSupportNotice: false, // отключить рекламу
         // debug: true, // включи для отладки
 
         fallbackLng: 'uk', // если ничего не подошло → украинский
@@ -35,6 +36,10 @@ fetch('./language/lang.json')
 
 // Функция обновления всех текстов на странице
 function updateContent() {
+  // Обновляем заголовок страницы
+  document.title = i18next.t('site.title');
+
+  // Обновляем все элементы с data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const translated = i18next.t(key);
