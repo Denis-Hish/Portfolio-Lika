@@ -355,9 +355,9 @@ header.header {
         top: 0;
         width: 100%;
         right: -100%;
-        min-height: 100vh;
+        min-height: 100dvh;
         /* background-color: var(--color-white); */
-        background-color: rgb(from #0f0 r g b / 0.5);
+        background-color: rgb(from #0ff r g b / 0.5);
         flex-direction: column;
         justify-content: center;
         align-items: center;
