@@ -10,6 +10,7 @@ const heightHeader = document.querySelector('header').offsetHeight;
 navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('open');
   navMenu.classList.toggle('open'); // Добавляем класс к меню
+  document.body.classList.toggle('menu-open');
 });
 
 // Закрытие меню при клике на пункт навигации
@@ -17,6 +18,7 @@ navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navToggle.classList.remove('open');
     navMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
   });
 });
 

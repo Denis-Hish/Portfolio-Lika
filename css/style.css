@@ -344,6 +344,10 @@ header.header {
 
 /* Mobile */
 @media (max-width: 767px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+
   header.header {
     .nav {
       .nav-menu {
@@ -351,9 +355,9 @@ header.header {
         top: 0;
         width: 100%;
         right: -100%;
-        min-height: 100dvh;
-        background-color: var(--color-white);
-        /* background-color: #f06; */
+        min-height: 100svh;
+        background-color: var(--color-background);
+        /* background-color: rgb(from #f06 r g b / 0.5); */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -362,7 +366,6 @@ header.header {
 
         &.open {
           right: 0;
-          background-color: var(--color-background);
         }
 
         .nav-link {
