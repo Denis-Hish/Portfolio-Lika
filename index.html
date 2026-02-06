@@ -18,10 +18,9 @@
 	<script src="./js/i18nextBrowserLanguageDetector.js" defer></script>
 	<script src="./js/translation.js" defer></script>
 
-	<!-- FONT AWESOME -->
-	<script src="./assets/fontawesome.js" defer></script>
-	<script src="./assets/regular.js" defer></script>
-	<script src="./assets/solid.js" defer></script>
+	<!-- GOOGLE ICONS -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=group,id_card,keyboard_arrow_down,keyboard_arrow_up,school,verified&display=swap">
 
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="./css/style.css">
@@ -69,37 +68,58 @@
 	</header>
 
 	<section id="home" class="hero">
-		<h2 class="title">Hero section</h2>
+		<div class="container">
+			<div class="hero-container">
+				<div class="item content">
+					<h1 class="title">Лідія Андрійчук</h1>
+					<span class="divider"></span>
+					<h3 class="subtitle">Психолог, психотерапевт</h3>
+					<p>Допомагаю знайти внутрішню гармонію та впоратися з життєвими труднощами. Індивідуальний підхід до кожного
+						клієнта, заснований на доказових методах психотерапії.</p>
+					<div class="buttons">
+						<button class="btn-primary">Записатися на консультацію</button>
+					</div>
+				</div>
+				<div class="item image">
+					<img src="./img/hero_img_1.png" alt="Hero image">
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section id="about" class="about">About section</section>
 	<section id="education" class="education">
 		<div class="container">
 			<h2 class="title">Освіта та кваліфікації</h2>
-
 			<!-- data-multiple="false" - открыт только один -->
 			<div id="accordion" class="accordion" data-multiple="false">
 				<div class="item">
 					<div class="link">
-						<i class="icon fa-solid fa-graduation-cap"></i>
+						<span class="icon material-symbols-outlined">
+							school
+						</span>
 						<p class="title">Вища освіта</p>
-						<i class="chevron fa-solid fa-chevron-down"></i>
+						<span class="chevron material-symbols-outlined">
+							keyboard_arrow_down
+						</span>
 					</div>
 					<div class="submenu">
 						<div class="content">
 							<p><strong>Київський національний університет імені Тараса Шевченка</strong></p>
-							<p><strong><i>Спеціальність:</i></strong> Клінічна психологія</p>
-							<p><strong><i>Роки навчання:</i></strong> 2010-2016</p>
-							<p><i>Кваліфікація: Магістр психології</i></p>
+							<p><i>Спеціальність:</i> Клінічна психологія</p>
+							<p><i>Роки навчання:</i> 2010-2016</p>
+							<p><i>Кваліфікація:</i> Магістр психології</p>
 						</div>
 					</div>
 				</div>
-
 				<div class="item">
 					<div class="link">
-						<i class="icon fa-solid fa-certificate"></i>
+						<span class="icon material-symbols-outlined">
+							verified</span>
 						<p class="title">Сертифікати та курси</p>
-						<i class="chevron fa-solid fa-chevron-down"></i>
+						<span class="chevron material-symbols-outlined">
+							keyboard_arrow_down
+						</span>
 					</div>
 					<div class="submenu">
 						<div class="content">
@@ -112,8 +132,45 @@
 						</div>
 					</div>
 				</div>
-
-
+				<div class="item">
+					<div class="link">
+						<span class="icon material-symbols-outlined">
+							id_card
+						</span>
+						<p class="title">Професійна діяльність</p>
+						<span class="chevron material-symbols-outlined">
+							keyboard_arrow_down
+						</span>
+					</div>
+					<div class="submenu">
+						<div class="content">
+							<p><strong>Приватна практика</strong> (2018 - теперішній час)</p>
+							<p>Індивідуальне психологічне консультування дорослих</p>
+							<p><strong>Психологічний центр "Гармонія"</strong> (2016-2018)</p>
+							<p>Психолог-консультант, робота з клієнтами різних вікових груп</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="link">
+						<span class="icon material-symbols-outlined">
+							group
+						</span>
+						<p class="title">Членство в організаціях</p>
+						<span class="chevron material-symbols-outlined">
+							keyboard_arrow_down
+						</span>
+					</div>
+					<div class="submenu">
+						<div class="content">
+							<ul>
+								<li>Українська асоціація когнітивно-поведінкової терапії</li>
+								<li>Європейська асоціація психотерапії (EAP)</li>
+								<li>Регулярна супервізія у сертифікованого супервізора</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 
 	</section>
@@ -153,8 +210,9 @@
 	</footer>
 
 	<button id="scrollToTop" class="scroll-to-top">
-		<i class="fa-solid fa-chevron-up"></i>
-		</svg>
+		<span class="icon material-symbols-outlined">
+			keyboard_arrow_up
+		</span>
 	</button>
 
 </body>
