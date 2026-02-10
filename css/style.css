@@ -80,6 +80,13 @@ button {
   cursor: pointer;
 }
 
+.btn {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
 input,
 textarea {
   outline: none;
@@ -87,7 +94,7 @@ textarea {
 }
 
 section {
-  padding: 8rem 0;
+  padding: 7rem 0;
   scroll-margin-top: var(--header-height);
 
   &:nth-child(even) {
