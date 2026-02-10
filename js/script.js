@@ -213,88 +213,109 @@ const swiper = new Swiper('.swiper', {
 });
 
 //* ------------ IMask Маска номера телефона ------------ *//
-// var phoneMask = IMask(document.getElementById('phone'), {
-//   mask: [
-//     {
-//       mask: '+00 (000) 00 00 000',
-//       startsWith: '38',
-//       lazy: false,
-//       country: 'Ukraine',
-//     },
-//     {
-//       mask: '+00 000 000 000',
-//       startsWith: '48',
-//       lazy: false,
-//       country: 'Poland',
-//     },
-//     {
-//       mask: '000 000 000',
-//       startsWith: '',
-//       lazy: false,
-//     },
-//     {
-//       mask: '+000000000000000',
-//       startsWith: '+',
-//       country: 'unknown',
-//     },
-//   ],
-//   dispatch: (appended, dynamicMasked) => {
-//     const number = (dynamicMasked.value + appended).replace(/\D/g, '');
+const phoneInput = document.getElementById('phone');
 
-//     return dynamicMasked.compiledMasks.find(
-//       m => number.indexOf(m.startsWith) === 0,
-//     );
-//   },
-// });
+if (phoneInput && window.IMask) {
+  IMask(phoneInput, {
+    mask: [
+      { mask: '+00 000 000 000', lazy: true },
+      { mask: '000 000 000', lazy: true },
+      // { mask: '000 000 000 000', lazy: true },
+    ],
+    dispatch: (appended, dynamicMasked) => {
+      const value = `${dynamicMasked.value}${appended}`;
+      // const digits = value.replace(/\D/g, '');
 
-// const phoneMask = IMask(document.getElementById('phone'), {
-//   mask: [
-//     { mask: '000 000 000', startsWith: '', lazy: false }, // без +
-//     { mask: '+00 000 000 000', startsWith: '+', lazy: false }, // с +
-//   ],
+      if (value.trim().startsWith('+')) {
+        return dynamicMasked.compiledMasks[0];
+      }
 
-//   dispatch: (appended, dynamicMasked) => {
-//     const value = dynamicMasked.value + appended;
-//     return value.startsWith('+')
-//       ? dynamicMasked.compiledMasks[1] // с +
-//       : dynamicMasked.compiledMasks[0]; // без +
-//   },
-// });
+      // if (digits.length > 9) {
+      //   return dynamicMasked.compiledMasks[2];
+      // }
+
+      return dynamicMasked.compiledMasks[1];
+    },
+  });
+}
 
 //* ----------------- Web3Form ----------------- *//
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+(function () {
+  const forms = document.querySelectorAll('.needs-validation');
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
+  Array.prototype.slice.call(forms).forEach(form => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const statusEl = document.getElementById('form-status');
 
-  const formData = new FormData(form);
-  // formData.append('access_key', '697ed4fb-1bb4-4b4e-aac9-ad92288a3b5d');
-  formData.append('access_key', 'YOUR_ACCESS_KEY_HERE');
+    form.addEventListener('submit', async event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
 
-  const originalText = submitBtn.textContent;
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) {
+          firstInvalid.focus();
+        }
 
-  submitBtn.textContent = 'Sending...';
-  submitBtn.disabled = true;
+        form.classList.add('was-validated');
+        return;
+      }
 
-  try {
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData,
+      event.preventDefault();
+      event.stopPropagation();
+      form.classList.add('was-validated');
+
+      const formData = new FormData(form);
+      // formData.append('access_key', '697ed4fb-1bb4-4b4e-aac9-ad92288a3b5d');
+      formData.append('access_key', 'YOUR_ACCESS_KEY_HERE');
+
+      const payload = {};
+      formData.forEach((value, key) => {
+        payload[key] = value;
+      });
+
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      statusEl.textContent = 'Відправлення...';
+      statusEl.classList.remove('hidden', 'error', 'success');
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          statusEl.textContent = 'Ваше повідомлення успішно відправлено!';
+          statusEl.classList.add('success');
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          statusEl.textContent =
+            data.message || 'Сталася помилка. Спробуйте ще раз.';
+          statusEl.classList.add('error');
+        }
+      } catch (error) {
+        statusEl.textContent = 'Сталася помилка. Спробуйте ще раз.';
+        statusEl.classList.add('error');
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+
+        setTimeout(() => {
+          statusEl.classList.add('hidden');
+          statusEl.textContent = '';
+          statusEl.classList.remove('error', 'success');
+        }, 7000);
+      }
     });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      alert('Success! Your message has been sent.');
-      form.reset();
-    } else {
-      alert('Error: ' + data.message);
-    }
-  } catch (error) {
-    alert('Something went wrong. Please try again.');
-  } finally {
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-  }
-});
+  });
+})();

@@ -12,6 +12,9 @@
   --color-white: #fdfdfb;
   --color-background: #f8f6f3;
 
+  --color-error: #dc3545;
+  --color-success: #28a745;
+
   --duration: 0.2s ease-in-out;
 
   --rounded-md: 8px;
