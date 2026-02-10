@@ -227,7 +227,7 @@ header.header {
 }
 
 /* ---------- HERO SECTION ---------- */
-.hero {
+section.hero {
   padding-bottom: 0;
   padding-top: calc(8rem + var(--header-height));
   /* min-height: 100vh; */
@@ -275,19 +275,19 @@ header.header {
 }
 
 /* ---------- ABOUT SECTION ---------- */
-.about {
+section.about {
 }
 
 /* ---------- EDUCATION SECTION ---------- */
-.education {
+section.education {
 }
 
 /* ---------- SERVICES SECTION ---------- */
-.services {
+section.services {
 }
 
 /* ---------- CONTACTS SECTION ---------- */
-.contacts {
+section.contacts {
   .contacts-container {
     display: flex;
     gap: 3rem;
@@ -305,14 +305,23 @@ header.header {
 }
 
 /* ---------- FOOTER ---------- */
-/* footer.footer {
-  } */
+footer.footer {
+  background-color: #2c2c2c;
+  color: var(--color-white);
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+}
 
 /* ---------- MEDIA QUERIES ---------- */
 /* Tablet */
 @media (max-width: 991px) {
   /* ---------- CONTACTS SECTION ---------- */
-  .contacts {
+  section.contacts {
     .contacts-container {
       gap: 1rem;
       flex-direction: column;
@@ -466,7 +475,7 @@ header.header {
   }
 
   /* ---------- HERO SECTION ---------- */
-  .hero {
+  section.hero {
     padding: calc(2rem + var(--header-height)) 0;
 
     .hero-container {
