@@ -39,15 +39,15 @@
 		<div class="container">
 			<nav class="nav">
 				<div class="logo">
-					<a href="#" data-i18n="site.title">Лідія Андрійчук - Психолог</a>
+					<a href="#" data-translate="site.title">Лідія Андрійчук - Психолог</a>
 				</div>
 
 				<ul class="nav-menu">
-					<li><a href="#home" class="nav-link" data-i18n="nav.home">Головна</a></li>
-					<li><a href="#about" class="nav-link" data-i18n="nav.about">Про мене</a></li>
-					<li><a href="#education" class="nav-link" data-i18n="nav.education">Освіта</a></li>
-					<li><a href="#services" class="nav-link" data-i18n="nav.services">Послуги</a></li>
-					<li><a href="#contacts" class="nav-link" data-i18n="nav.contacts">Контакти</a></li>
+					<li><a href="#home" class="nav-link" data-translate="nav.home">Головна</a></li>
+					<li><a href="#about" class="nav-link" data-translate="nav.about">Про мене</a></li>
+					<li><a href="#education" class="nav-link" data-translate="nav.education">Освіта</a></li>
+					<li><a href="#services" class="nav-link" data-translate="nav.services">Послуги</a></li>
+					<li><a href="#contacts" class="nav-link" data-translate="nav.contacts">Контакти</a></li>
 
 					<!-- Языки в мобильном меню -->
 					<li class="nav-language mobile">
@@ -78,13 +78,14 @@
 		<div class="container">
 			<div class="hero-container">
 				<div class="item content">
-					<h1 class="title">Лідія Андрійчук</h1>
+					<h1 class="title" data-translate="fullname">Лідія Андрійчук</h1>
 					<h3 class="subtitle">Психолог, психотерапевт</h3>
 					<span class="divider"></span>
 					<p>Допомагаю знайти внутрішню гармонію та впоратися з життєвими труднощами. Індивідуальний підхід до кожного
 						клієнта, заснований на доказових методах психотерапії.</p>
 					<div class="buttons">
-						<a href="#contacts" class="btn btn-primary btn-pulsed">Записатися на консультацію</a>
+						<a href="#contacts" class="btn btn-primary btn-pulsed" data-translate="hero.button">Записатися на
+							консультацію</a>
 					</div>
 				</div>
 				<div class="item image">
@@ -98,7 +99,7 @@
 
 	<section id="education" class="education">
 		<div class="container">
-			<h2 class="title">Освіта та кваліфікації</h2>
+			<h2 class="title" data-translate="education.title">Освіта та кваліфікації</h2>
 			<div class="divider" style="margin-bottom: 2rem; width: 25%;"></div>
 			<!-- data-multiple="false" - открыт только один -->
 			<div id="accordion" class="accordion" data-multiple="false">
@@ -185,7 +186,7 @@
 
 	<section id="services" class="services">
 		<div class="container">
-			<h2 class="title">Мої послуги</h2>
+			<h2 class="title" data-translate="services.title">Мої послуги</h2>
 			<div class="divider" style="margin-bottom: 2rem; width: 25%;"></div>
 
 			<div class="swiper-shell">
@@ -194,44 +195,54 @@
 					<div class="swiper-wrapper">
 						<!-- Slides -->
 						<div class="swiper-slide">
-							<span class="icon material-symbols-outlined">
-								person
-							</span>
-							<h3 class="subtitle">Індивідуальна консультація</h3>
-							<p>Особиста зустріч один на один для опрацювання ваших запитів</p>
-							<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							<a href="#contacts" class="slide">
+								<span class="icon material-symbols-outlined">
+									person
+								</span>
+								<h3 class="subtitle">Індивідуальна консультація</h3>
+								<p>Особиста зустріч один на один для опрацювання ваших запитів</p>
+								<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							</a>
 						</div>
 						<div class="swiper-slide">
-							<span class="icon material-symbols-outlined">
-								laptop_windows
-							</span>
-							<h3 class="subtitle">Онлайн-консультація</h3>
-							<p>Зручний формат для тих, хто віддає перевагу консультуватися з дому або знаходиться в іншому місті</p>
-							<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							<a href="#contacts" class="slide">
+								<span class="icon material-symbols-outlined">
+									laptop_windows
+								</span>
+								<h3 class="subtitle">Онлайн-консультація</h3>
+								<p>Зручний формат для тих, хто віддає перевагу консультуватися з дому або знаходиться в іншому місті</p>
+								<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							</a>
 						</div>
 						<div class="swiper-slide">
-							<span class="icon material-symbols-outlined">
-								group
-							</span>
-							<h3 class="subtitle">Парна терапія</h3>
-							<p>Робота з парами для покращення комунікації, вирішення конфліктів та зміцнення стосунків</p>
-							<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							<a href="#contacts" class="slide">
+								<span class="icon material-symbols-outlined">
+									group
+								</span>
+								<h3 class="subtitle">Парна терапія</h3>
+								<p>Робота з парами для покращення комунікації, вирішення конфліктів та зміцнення стосунків</p>
+								<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							</a>
 						</div>
 						<div class="swiper-slide">
-							<span class="icon material-symbols-outlined">
-								psychiatry
-							</span>
-							<h3 class="subtitle">Довгострокова терапія</h3>
-							<p>Глибоке опрацювання комплексних психологічних проблем</p>
-							<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							<a href="#contacts" class="slide">
+								<span class="icon material-symbols-outlined">
+									psychiatry
+								</span>
+								<h3 class="subtitle">Довгострокова терапія</h3>
+								<p>Глибоке опрацювання комплексних психологічних проблем</p>
+								<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							</a>
 						</div>
 						<div class="swiper-slide">
-							<span class="icon material-symbols-outlined">
-								e911_emergency
-							</span>
-							<h3 class="subtitle">Кризова допомога</h3>
-							<p>Екстрена психологічна підтримка в гострих життєвих ситуаціях</p>
-							<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							<a href="#contacts" class="slide">
+								<span class="icon material-symbols-outlined">
+									e911_emergency
+								</span>
+								<h3 class="subtitle">Кризова допомога</h3>
+								<p>Екстрена психологічна підтримка в гострих життєвих ситуаціях</p>
+								<!-- <small>Тривалість сеансу 50-60 хвилин</small> -->
+							</a>
 						</div>
 					</div>
 					<!-- Pagination -->
@@ -253,7 +264,7 @@
 
 	<section id="contacts" class="contacts">
 		<div class="container">
-			<h2 class='title'>Контакти</h2>
+			<h2 class='title' data-translate="contacts.title">Контакти</h2>
 			<div class="divider" style="margin-bottom: 2rem; width: 25%;"></div>
 
 			<div class="contacts-container">
@@ -320,8 +331,8 @@
 		<h3 class="subtitle">Subtitle / Підзаголовок</h3>
 
 		<div class="buttons">
-			<button class="btn-primary">Записатися</button>
-			<button class="btn-secondary">Детальніше</button>
+			<button class="btn-primary btn-pulsed">Записатися</button>
+			<button class="btn-secondary btn-pulsed">Детальніше</button>
 		</div>
 
 		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum necessitatibus esse reprehenderit perferendis!

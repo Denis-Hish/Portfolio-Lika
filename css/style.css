@@ -170,6 +170,7 @@ header.header {
     .logo {
       a {
         font-family: var(--font-title);
+        font-style: italic;
         font-size: 1.25em;
       }
     }
@@ -309,7 +310,14 @@ header.header {
 
 /* ---------- MEDIA QUERIES ---------- */
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
+  /* ---------- CONTACTS SECTION ---------- */
+  .contacts {
+    .contacts-container {
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
 }
 
 /* Mobile */

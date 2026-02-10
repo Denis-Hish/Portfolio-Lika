@@ -124,6 +124,8 @@
 
 /* ---------- SWIPER SLIDER ---------- */
 .swiper-shell {
+  --position-navigation-btn: 0;
+
   position: relative;
 
   [class^='swiper-button'] {
@@ -143,14 +145,14 @@
   }
 
   .swiper-button-prev {
-    left: -24px;
+    left: var(--position-navigation-btn);
     svg {
       margin-left: -2px;
     }
   }
 
   .swiper-button-next {
-    right: -24px;
+    right: var(--position-navigation-btn);
     svg {
       margin-left: 2px;
     }
@@ -167,20 +169,29 @@
 
   .swiper-wrapper {
     align-items: stretch;
+    margin-bottom: 2rem;
 
     .swiper-slide {
       height: auto;
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding: 2rem;
-      background-color: var(--color-white);
-      border-radius: var(--rounded-md);
-      box-shadow: var(--shadow-md);
-      transition: box-shadow var(--duration);
 
-      &:hover {
-        box-shadow: var(--shadow-lg);
+      .slide {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        margin: 20px;
+        background-color: var(--color-white);
+        border-radius: var(--rounded-md);
+        box-shadow: var(--shadow-md);
+        transition: box-shadow var(--duration);
+
+        &:hover {
+          box-shadow: var(--shadow-lg);
+        }
       }
 
       .icon {
@@ -215,7 +226,7 @@
   .autoplay-progress {
     position: absolute;
     right: 16px;
-    bottom: 16px;
+    bottom: 40px;
     z-index: 10;
     width: 40px;
     height: 40px;
@@ -249,14 +260,6 @@
 }
 /* Mobile */
 @media (max-width: 767px) {
-  .swiper-shell {
-    .swiper-button-prev {
-      left: 4px;
-    }
-    .swiper-button-next {
-      right: 4px;
-    }
-  }
 }
 
 /* ---------- CONTACT FORM ---------- */
@@ -338,7 +341,7 @@
   .form-status {
     color: var(--color-text-light);
     padding-bottom: 10px;
-    height: 30px;
+    /* height: 30px; */
   }
 
   .form-status.success {
@@ -381,6 +384,9 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+  #form {
+    text-align: center;
+  }
 }
 
 /* ---------- SCROLL TO TOP ---------- */
@@ -435,15 +441,6 @@
 
   position: relative;
   display: inline-block;
-  padding: 16px 32px;
-  border: 2px solid #4fcaff;
-  border-radius: 50px;
-  background: #292929;
-  font: inherit;
-  font-size: 1.25rem;
-  text-decoration: none;
-  line-height: 1;
-  color: #eee;
   overflow: hidden;
 
   span {

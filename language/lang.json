@@ -3,22 +3,40 @@
     "translation": {
       "site.title": "Лідія Андрійчук - Психолог",
       "fullname": "Лідія Андрійчук",
+
       "nav.home": "Головна",
       "nav.about": "Про мене",
       "nav.education": "Освіта",
       "nav.services": "Послуги",
-      "nav.contacts": "Контакти"
+      "nav.contacts": "Контакти",
+
+      "hero.button": "Записатися на консультацію",
+
+      "education.title": "Освіта та кваліфікації",
+
+      "services.title": "Мої послуги",
+
+      "contacts.title": "Контакти"
     }
   },
   "pl": {
     "translation": {
       "site.title": "Lidia Andrijczuk - Psycholog",
       "fullname": "Lidia Andrijczuk",
+
       "nav.home": "Główna",
       "nav.about": "O mnie",
       "nav.education": "Edukacja",
       "nav.services": "Usługi",
-      "nav.contacts": "Kontakty"
+      "nav.contacts": "Kontakty",
+
+      "hero.button": "Umów się na konsultację",
+
+      "education.title": "Edukacja i kwalifikacje",
+
+      "services.title": "Moje usługi",
+
+      "contacts.title": "Kontakty"
     }
   }
 }

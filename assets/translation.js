@@ -40,8 +40,8 @@ function updateContent() {
   document.title = i18next.t('site.title');
 
   // Обновляем все элементы с data-i18n
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    const key = el.getAttribute('data-translate');
     const translated = i18next.t(key);
 
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {

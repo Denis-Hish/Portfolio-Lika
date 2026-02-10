@@ -157,18 +157,17 @@ const progressContent = document.querySelector('.autoplay-progress span');
 
 const swiper = new Swiper('.swiper', {
   // Parameters
-  spaceBetween: 32,
   loop: true,
   // mousewheel: true,
   keyboard: {
     enabled: true,
   },
-  autoplay: {
-    delay: 10000,
-    disableOnInteraction: false, // после взаимодействия автоплей продолжит работать
-    pauseOnMouseEnter: true,
-  },
-  speed: 1200,
+  // autoplay: {
+  //   delay: 10000,
+  //   disableOnInteraction: false, // после взаимодействия автоплей продолжит работать
+  //   pauseOnMouseEnter: true,
+  // },
+  // speed: 1200,
 
   // Pagination
   pagination: {
@@ -181,19 +180,19 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     576: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 0,
     },
     992: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 0,
     },
     1200: {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 0,
     },
   },
 
