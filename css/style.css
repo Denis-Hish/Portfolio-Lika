@@ -83,8 +83,7 @@ button {
 input,
 textarea {
   outline: none;
-  font-size: 1rem;
-  font-family: var(--font-text);
+  font: inherit;
 }
 
 section {
@@ -288,277 +287,18 @@ header.header {
     .item {
       flex: 1;
     }
+
+    .item.form {
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-md);
+      border-radius: var(--rounded-md);
+    }
   }
 }
 
 /* ---------- FOOTER ---------- */
 /* footer.footer {
   } */
-
-/* ---------- ACCORDION ---------- */
-.accordion {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  border-radius: var(--rounded-md);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-
-  .item {
-    border-bottom: 1px solid var(--color-background);
-
-    .link {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1.5rem 2rem;
-      cursor: pointer;
-
-      .icon {
-        font-size: 50px;
-        font-variation-settings: 'wght' 100;
-        color: var(--color-primary);
-        transition: color var(--duration);
-      }
-
-      .title {
-        margin-bottom: 0;
-        color: var(--color-text-light);
-        transition: color var(--duration);
-      }
-
-      .chevron {
-        margin-left: auto;
-        font-size: 40px;
-        font-variation-settings: 'wght' 300;
-        color: var(--color-primary);
-        transition: transform var(--duration);
-      }
-
-      &:hover {
-        background-color: var(--color-background);
-
-        .icon {
-          color: var(--color-text-light);
-        }
-        .title {
-          color: var(--color-text-dark);
-        }
-        .chevron {
-          color: var(--color-text-light);
-        }
-      }
-    }
-
-    &.open {
-      .link {
-        background-color: var(--color-background);
-
-        .icon {
-          color: var(--color-text-light);
-        }
-        .title {
-          color: var(--color-text-dark);
-        }
-        .chevron {
-          transform: rotate(180deg);
-          /* transform: scaleY(-1); */
-          color: var(--color-text-light);
-        }
-      }
-    }
-
-    .submenu {
-      max-height: 0;
-      background: #fff;
-      transition: max-height var(--duration);
-      overflow: hidden;
-
-      .content {
-        padding: 1rem 7.2rem;
-
-        & > * {
-          margin-bottom: 2px;
-          color: var(--color-text-light);
-          line-height: 1.8;
-        }
-
-        ul {
-          margin-left: 18px;
-
-          li {
-            margin-bottom: 2px;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* ---------- SWIPER SLIDER ---------- */
-.swiper-shell {
-  position: relative;
-
-  [class^='swiper-button'] {
-    position: absolute;
-    top: 50%;
-    padding: 14px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--duration);
-
-    &:hover {
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      box-shadow: var(--shadow-md);
-    }
-  }
-
-  .swiper-button-prev {
-    left: -24px;
-    svg {
-      margin-left: -2px;
-    }
-  }
-
-  .swiper-button-next {
-    right: -24px;
-    svg {
-      margin-left: 2px;
-    }
-  }
-}
-
-.swiper {
-  --swiper-theme-color: var(--color-primary);
-  --swiper-navigation-size: 50px;
-
-  position: relative;
-  /* max-width: 800px; */
-  /* min-height: 300px; */
-
-  .swiper-wrapper {
-    align-items: stretch;
-
-    .swiper-slide {
-      height: auto;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 2rem;
-      background-color: var(--color-white);
-      border-radius: var(--rounded-md);
-      box-shadow: var(--shadow-md);
-      transition: box-shadow var(--duration);
-
-      &:hover {
-        box-shadow: var(--shadow-lg);
-      }
-
-      .icon {
-        margin-bottom: 1rem;
-        font-size: 70px;
-        font-variation-settings: 'wght' 100;
-        color: var(--color-primary);
-      }
-
-      .subtitle {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: var(--color-text-dark);
-      }
-
-      p {
-        text-align: center;
-        line-height: 1.5;
-        margin-bottom: 2rem;
-        text-wrap: balance;
-      }
-
-      /* small {
-        text-align: center;
-        color: var(--color-text-light);
-        margin-bottom: 1rem;
-        margin-top: auto;
-      } */
-    }
-  }
-
-  .autoplay-progress {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 200;
-    color: var(--swiper-theme-color);
-  }
-
-  .autoplay-progress svg {
-    --progress: 0;
-
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 1px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
-  }
-}
-
-.scroll-to-top {
-  --btn-size: 50px;
-  --icon-size: 50px;
-
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: var(--btn-size);
-  height: var(--btn-size);
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all var(--duration);
-  pointer-events: none;
-  z-index: 99;
-
-  .icon {
-    color: var(--color-white);
-    font-size: var(--icon-size);
-  }
-
-  &.visible {
-    opacity: 0.5;
-    transform: translateY(0);
-    pointer-events: auto;
-
-    &:hover {
-      opacity: 1;
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    &:active {
-      box-shadow: initial;
-      transform: translateY(0);
-    }
-  }
-}
 
 /* ---------- MEDIA QUERIES ---------- */
 /* Tablet */
@@ -748,34 +488,6 @@ header.header {
       .image {
         order: 1;
       }
-    }
-  }
-
-  /* ---------- ACCORDION ---------- */
-  .accordion {
-    .item {
-      .link {
-        padding: 1rem;
-        gap: 0.5rem;
-      }
-      .submenu {
-        .content {
-          padding: 1rem;
-          ul li {
-            font-size: 1em;
-          }
-        }
-      }
-    }
-  }
-
-  /* ---------- SWIPER SLIDER ---------- */
-  .swiper-shell {
-    .swiper-button-prev {
-      left: 4px;
-    }
-    .swiper-button-next {
-      right: 4px;
     }
   }
 }
