@@ -51,6 +51,8 @@ p {
 
 .title {
   text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
   color: var(--color-text-dark);
   margin-bottom: 1.5rem;
 }
@@ -58,7 +60,7 @@ p {
 .subtitle {
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
 }
 
@@ -71,6 +73,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 button {
@@ -229,12 +232,11 @@ header.header {
 /* ---------- HERO SECTION ---------- */
 section.hero {
   padding-bottom: 0;
-  padding-top: calc(8rem + var(--header-height));
-  /* min-height: 100vh; */
+  padding-top: calc(1rem + var(--header-height));
 
   .hero-container {
-    /* margin-top: 75px; */
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
 
     .item {
@@ -245,7 +247,6 @@ section.hero {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      order: 2;
 
       .title {
         font-style: italic;
@@ -259,17 +260,18 @@ section.hero {
 
       p {
         margin-top: 1rem;
+        text-wrap: pretty;
       }
 
-      .buttons {
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
+      a {
+        text-align: center;
+        margin: 2rem auto 0;
       }
     }
 
     .image {
-      order: 1;
+      display: flex;
+      align-items: end;
     }
   }
 }
@@ -319,18 +321,7 @@ footer.footer {
 
 /* ---------- MEDIA QUERIES ---------- */
 /* Tablet */
-@media (max-width: 991px) {
-  /* ---------- CONTACTS SECTION ---------- */
-  section.contacts {
-    .contacts-container {
-      gap: 1rem;
-      flex-direction: column;
-    }
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   body.menu-open {
     overflow: hidden;
   }
@@ -474,12 +465,22 @@ footer.footer {
     }
   }
 
+  /* ---------- CONTACTS SECTION ---------- */
+  section.contacts {
+    .contacts-container {
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
   /* ---------- HERO SECTION ---------- */
   section.hero {
-    padding: calc(2rem + var(--header-height)) 0;
+    padding: calc(1rem + var(--header-height)) 0;
 
     .hero-container {
-      /* margin-top: 80px; */
       flex-direction: column;
       gap: 1rem;
 
@@ -490,8 +491,7 @@ footer.footer {
       .content {
         flex-direction: column;
         justify-content: center;
-        gap: 1.5rem;
-        order: 2;
+        gap: 1rem;
 
         .title {
           font-style: italic;
@@ -502,15 +502,12 @@ footer.footer {
           margin-bottom: 1rem;
         }
 
-        .buttons {
+        a {
           margin-top: 1rem;
-          display: flex;
-          gap: 1.5rem;
         }
       }
 
       .image {
-        order: 1;
       }
     }
   }
@@ -519,6 +516,7 @@ footer.footer {
 /*! ---------- DELETE ---------- !*/
 .colors {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 
   .box {
