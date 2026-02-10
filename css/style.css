@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import './variables.css';
+@import './components.css';
 
 * {
   margin: 0;
@@ -43,7 +44,6 @@ h3 {
 }
 
 p {
-  font-size: 1.125em;
   color: var(--color-text-light);
   line-height: 1.8;
   margin-bottom: 1rem;
@@ -73,8 +73,21 @@ img {
   height: auto;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
 section {
   padding: 8rem 0;
+  scroll-margin-top: var(--header-height);
 
   &:nth-child(even) {
     background-color: var(--color-white);
@@ -83,13 +96,6 @@ section {
   &:nth-child(odd) {
     background-color: var(--color-background);
   }
-}
-
-button {
-  border: none;
-  background-color: transparent;
-  font: inherit;
-  cursor: pointer;
 }
 
 .btn-primary,
@@ -211,12 +217,14 @@ header.header {
   }
 }
 
+/* ---------- HERO SECTION ---------- */
 .hero {
-  /* padding-bottom: 0; */
-  min-height: 100vh;
+  padding-bottom: 0;
+  padding-top: calc(8rem + var(--header-height));
+  /* min-height: 100vh; */
 
   .hero-container {
-    margin-top: 75px;
+    /* margin-top: 75px; */
     display: flex;
     gap: 3rem;
 
@@ -237,11 +245,15 @@ header.header {
 
       .subtitle {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        margin-top: 1rem;
       }
 
       .buttons {
-        margin-top: 3rem;
+        margin-top: 2rem;
         display: flex;
         justify-content: center;
       }
@@ -252,6 +264,34 @@ header.header {
     }
   }
 }
+
+/* ---------- ABOUT SECTION ---------- */
+.about {
+}
+
+/* ---------- EDUCATION SECTION ---------- */
+.education {
+}
+
+/* ---------- SERVICES SECTION ---------- */
+.services {
+}
+
+/* ---------- CONTACTS SECTION ---------- */
+.contacts {
+  .contacts-container {
+    display: flex;
+    gap: 3rem;
+
+    .item {
+      flex: 1;
+    }
+  }
+}
+
+/* ---------- FOOTER ---------- */
+/* footer.footer {
+  } */
 
 /* ---------- ACCORDION ---------- */
 .accordion {
@@ -353,9 +393,127 @@ header.header {
   }
 }
 
-/* ---------- FOOTER ---------- */
-/* footer.footer {
-  } */
+/* ---------- SWIPER SLIDER ---------- */
+.swiper-shell {
+  position: relative;
+
+  [class^='swiper-button'] {
+    position: absolute;
+    top: 50%;
+    padding: 14px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--duration);
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  .swiper-button-prev {
+    left: -24px;
+    svg {
+      margin-left: -2px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -24px;
+    svg {
+      margin-left: 2px;
+    }
+  }
+}
+
+.swiper {
+  --swiper-theme-color: var(--color-primary);
+  --swiper-navigation-size: 50px;
+
+  position: relative;
+  /* max-width: 800px; */
+  /* min-height: 300px; */
+
+  .swiper-wrapper {
+    align-items: stretch;
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      background-color: var(--color-white);
+      border-radius: var(--rounded-md);
+      box-shadow: var(--shadow-md);
+      transition: box-shadow var(--duration);
+
+      &:hover {
+        box-shadow: var(--shadow-lg);
+      }
+
+      .icon {
+        margin-bottom: 1rem;
+        font-size: 70px;
+        font-variation-settings: 'wght' 100;
+        color: var(--color-primary);
+      }
+
+      .subtitle {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--color-text-dark);
+      }
+
+      p {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        text-wrap: balance;
+      }
+
+      /* small {
+        text-align: center;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+        margin-top: auto;
+      } */
+    }
+  }
+
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    color: var(--swiper-theme-color);
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 1px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+}
 
 .scroll-to-top {
   --btn-size: 50px;
@@ -440,6 +598,7 @@ header.header {
     }
   }
 
+  /* ---------- HEADER ---------- */
   header.header {
     .nav {
       .nav-menu {
@@ -549,11 +708,12 @@ header.header {
     }
   }
 
+  /* ---------- HERO SECTION ---------- */
   .hero {
-    padding-bottom: 4rem;
+    padding: calc(2rem + var(--header-height)) 0;
 
     .hero-container {
-      margin-top: 80px;
+      /* margin-top: 80px; */
       flex-direction: column;
       gap: 1rem;
 
@@ -599,8 +759,21 @@ header.header {
       .submenu {
         .content {
           padding: 1rem;
+          ul li {
+            font-size: 1em;
+          }
         }
       }
+    }
+  }
+
+  /* ---------- SWIPER SLIDER ---------- */
+  .swiper-shell {
+    .swiper-button-prev {
+      left: 4px;
+    }
+    .swiper-button-next {
+      right: 4px;
     }
   }
 }

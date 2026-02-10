@@ -1,0 +1,62 @@
+/* ---------- CONTACT FORM ---------- */
+
+#form {
+  --width-input-field: 100%;
+
+  .form-group {
+    position: relative;
+    width: var(--width-input-field);
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--color-secondary);
+      background-color: var(--color-white);
+      border-radius: var(--rounded-sm);
+      color: var(--color-text-dark);
+      font-size: 1em;
+      transition: all var(--duration);
+      margin-bottom: 1rem;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      padding: 10px;
+      pointer-events: none;
+      font-size: 1em;
+      color: var(--color-text-light);
+      transition: all var(--duration);
+    }
+
+    input:valid ~ span,
+    input:focus ~ span,
+    textarea:valid ~ span,
+    textarea:focus ~ span {
+      transform: translate(12px, -7px);
+      font-size: 0.65em;
+      padding: 2px 10px;
+      color: var(--color-text-dark);
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 2px;
+    }
+
+    input:valid,
+    input:focus,
+    textarea:valid,
+    textarea:focus {
+      border: 1px solid var(--color-primary);
+    }
+  }
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+/* Tablet */
+@media (max-width: 1024px) {
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+}
