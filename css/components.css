@@ -138,8 +138,6 @@
 
   .swiper {
     position: relative;
-    /* max-width: 800px; */
-    /* min-height: 300px; */
 
     .swiper-wrapper {
       align-items: stretch;
@@ -197,12 +195,12 @@
             margin-bottom: 1rem;
           }
 
-          small {
+          /* small {
             text-align: center;
             color: var(--color-text-light);
             margin-top: auto;
             margin-bottom: 1rem;
-          }
+          } */
 
           &:hover {
             box-shadow: var(--shadow-lg);
@@ -220,7 +218,7 @@
     .autoplay-progress {
       position: absolute;
       right: 16px;
-      bottom: 40px;
+      bottom: 0px;
       z-index: 10;
       width: 40px;
       height: 40px;

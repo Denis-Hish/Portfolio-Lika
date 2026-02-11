@@ -162,12 +162,13 @@ const swiper = new Swiper('.swiper', {
   keyboard: {
     enabled: true,
   },
-  // autoplay: {
-  //   delay: 10000,
-  //   disableOnInteraction: false, // после взаимодействия автоплей продолжит работать
-  //   pauseOnMouseEnter: true,
-  // },
-  // speed: 1200,
+
+  autoplay: {
+    delay: 9000,
+    disableOnInteraction: false, // после взаимодействия автоплей продолжит работать
+    pauseOnMouseEnter: true,
+  },
+  speed: 1200,
 
   // Pagination
   pagination: {
