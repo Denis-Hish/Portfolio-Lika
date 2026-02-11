@@ -18,10 +18,15 @@
       cursor: pointer;
 
       .icon {
+        stroke: var(--color-primary);
+        stroke-width: 1px;
+        width: 44px;
+        height: 44px;
+
         font-size: 50px;
         font-variation-settings: 'wght' 100;
         color: var(--color-primary);
-        transition: color var(--duration);
+        transition: stroke var(--duration);
       }
 
       .title {
@@ -32,23 +37,24 @@
 
       .chevron {
         margin-left: auto;
-        font-size: 40px;
-        font-variation-settings: 'wght' 300;
-        color: var(--color-primary);
-        transition: transform var(--duration);
+        stroke: var(--color-primary);
+        stroke-width: 1.5px;
+        width: 32px;
+        height: 32px;
+        transition: all var(--duration);
       }
 
       &:hover {
         background-color: var(--color-background);
 
         .icon {
-          color: var(--color-text-light);
+          stroke: var(--color-text-light);
         }
         .title {
           color: var(--color-text-dark);
         }
         .chevron {
-          color: var(--color-text-light);
+          stroke: var(--color-text-light);
         }
       }
     }
@@ -58,7 +64,7 @@
         background-color: var(--color-background);
 
         .icon {
-          color: var(--color-text-light);
+          stroke: var(--color-text-light);
         }
         .title {
           color: var(--color-text-dark);
@@ -66,7 +72,7 @@
         .chevron {
           transform: rotate(180deg);
           /* transform: scaleY(-1); */
-          color: var(--color-text-light);
+          stroke: var(--color-text-light);
         }
       }
     }
@@ -124,9 +130,124 @@
 
 /* ---------- SWIPER SLIDER ---------- */
 .swiper-shell {
-  --position-navigation-btn: 0;
+  --swiper-theme-color: var(--color-primary);
+  --swiper-navigation-size: 50px;
+  --position-navigation-btn: -40px;
 
   position: relative;
+
+  .swiper {
+    position: relative;
+    /* max-width: 800px; */
+    /* min-height: 300px; */
+
+    .swiper-wrapper {
+      align-items: stretch;
+      margin-bottom: 2rem;
+
+      .swiper-slide {
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .slide {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          padding: 1.5rem 1rem;
+          margin: 20px;
+          background-color: var(--color-white);
+          border-radius: var(--rounded-md);
+          box-shadow: var(--shadow-md);
+          transition: box-shadow var(--duration);
+
+          .icon-container {
+            border: 1px solid var(--color-primary);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            transition: border-color var(--duration);
+
+            .icon {
+              stroke: var(--color-primary);
+              stroke-width: 1px;
+              width: 100%;
+              height: 100%;
+              transition: stroke var(--duration);
+            }
+          }
+
+          .subtitle {
+            text-align: center;
+            color: var(--color-text-dark);
+            margin-bottom: 2rem;
+          }
+
+          p {
+            text-align: center;
+            line-height: 1.5;
+            text-wrap: balance;
+            margin-bottom: 1rem;
+          }
+
+          small {
+            text-align: center;
+            color: var(--color-text-light);
+            margin-top: auto;
+            margin-bottom: 1rem;
+          }
+
+          &:hover {
+            box-shadow: var(--shadow-lg);
+            .icon-container {
+              border: 1px solid var(--color-text-light);
+              .icon {
+                stroke: var(--color-text-light);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 40px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 200;
+      color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 1px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  }
 
   [class^='swiper-button'] {
     position: absolute;
@@ -159,107 +280,34 @@
   }
 }
 
-.swiper {
-  --swiper-theme-color: var(--color-primary);
-  --swiper-navigation-size: 50px;
-
-  position: relative;
-  /* max-width: 800px; */
-  /* min-height: 300px; */
-
-  .swiper-wrapper {
-    align-items: stretch;
-    margin-bottom: 2rem;
-
-    .swiper-slide {
-      height: auto;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      .slide {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 1.5rem 1rem;
-        margin: 20px;
-        background-color: var(--color-white);
-        border-radius: var(--rounded-md);
-        box-shadow: var(--shadow-md);
-        transition: box-shadow var(--duration);
-
-        &:hover {
-          box-shadow: var(--shadow-lg);
-        }
-      }
-
-      .icon {
-        margin-bottom: 1rem;
-        font-size: 70px;
-        font-variation-settings: 'wght' 100;
-        color: var(--color-primary);
-      }
-
-      .subtitle {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: var(--color-text-dark);
-      }
-
-      p {
-        text-align: center;
-        line-height: 1.5;
-        margin-bottom: 2rem;
-        text-wrap: balance;
-      }
-
-      /* small {
-        text-align: center;
-        color: var(--color-text-light);
-        margin-bottom: 1rem;
-        margin-top: auto;
-      } */
-    }
-  }
-
-  .autoplay-progress {
-    position: absolute;
-    right: 16px;
-    bottom: 40px;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 200;
-    color: var(--swiper-theme-color);
-  }
-
-  .autoplay-progress svg {
-    --progress: 0;
-
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    stroke-width: 1px;
-    stroke: var(--swiper-theme-color);
-    fill: none;
-    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-    stroke-dasharray: 125.6;
-    transform: rotate(-90deg);
-  }
-}
-
 /* Tablet */
 @media (max-width: 1024px) {
 }
 /* Mobile */
 @media (max-width: 767px) {
+  .swiper-shell {
+    --position-navigation-btn: -18px;
+
+    [class^='swiper-button'] {
+      padding: 14px;
+      background-color: initial;
+      box-shadow: none;
+
+      &:hover {
+        color: var(--color-primary);
+        background-color: initial;
+        box-shadow: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: var(--position-navigation-btn);
+    }
+
+    .swiper-button-next {
+      right: var(--position-navigation-btn);
+    }
+  }
 }
 
 /* ---------- CONTACT FORM ---------- */
@@ -392,11 +440,11 @@
 /* ---------- SCROLL TO TOP ---------- */
 .scroll-to-top {
   --btn-size: 50px;
-  --icon-size: 50px;
+  --icon-size: 36px;
 
   position: fixed;
   right: 30px;
-  bottom: 30px;
+  bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,8 +460,10 @@
   z-index: 99;
 
   .icon {
-    color: var(--color-white);
-    font-size: var(--icon-size);
+    stroke: var(--color-white);
+    stroke-width: 1.5px;
+    width: var(--icon-size);
+    height: var(--icon-size);
   }
 
   &.visible {
@@ -431,6 +481,13 @@
       box-shadow: initial;
       transform: translateY(0);
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .scroll-to-top {
+    right: 10px;
+    bottom: 30px;
   }
 }
 

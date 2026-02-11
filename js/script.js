@@ -341,3 +341,6 @@ btn.forEach(btn => {
     }, animationTime);
   });
 });
+
+//* ---------- LUCIDE ICONS ---------- *//
+lucide.createIcons();
