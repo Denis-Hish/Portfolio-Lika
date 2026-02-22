@@ -50,6 +50,7 @@
         justify-content: center;
         align-items: center;
         transition: right var(--duration);
+        gap: 2.5rem;
 
         &.open {
           right: 0;
@@ -227,6 +228,41 @@
 
       .item-image {
         order: 1;
+      }
+    }
+  }
+}
+
+/* Only PC */
+@media (hover: hover) and (pointer: fine) {
+  header.header {
+    .nav {
+      .nav-menu {
+        .nav-link {
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            width: 0%;
+            height: 1px;
+            background-color: var(--color-primary);
+            transform: translateX(-50%);
+            transition: width var(--duration);
+          }
+
+          &.active {
+            &::before {
+              width: 60%;
+            }
+          }
+
+          &:hover {
+            &::before {
+              width: 60%;
+            }
+          }
+        }
       }
     }
   }

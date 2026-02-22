@@ -459,7 +459,7 @@
   transition: all var(--duration);
   outline: none;
   pointer-events: none;
-  z-index: 9;
+  z-index: 20;
 
   .icon {
     stroke: var(--color-white);

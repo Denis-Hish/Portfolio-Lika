@@ -3,11 +3,13 @@
   --font-text: 'Inter', sans-serif;
 
   /* Цветовая палитра Quiet Luxury */
-  --color-text-dark: #2c2c2c; /* Темный для текста */
-  --color-text-light: #5a5a5a; /* Светлее для вторичного текста */
+  --color-text-dark: #2c2c2c; /* Primary text */
+  --color-text-light: #5a5a5a; /* Secondary text */
 
   --color-primary: #9badb7; /* Muted Blue */
-  --color-primary: #e4475b; /* Muted Blue */
+  --color-primary: #e4475b;
+  --color-primary: #00bcff; /* Sky 400 */
+
   --color-secondary: #e8ddd3; /* Soft Beige */
 
   --color-white: #fdfdfb;
