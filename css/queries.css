@@ -17,9 +17,9 @@
     font-size: 1em;
   }
 
-  section {
-    /* padding: 6rem 0; */
-  }
+  /* section {
+    padding: 6rem 0;
+  } */
 
   .btn-primary,
   .btn-secondary {
@@ -162,19 +162,12 @@
   }
 
   footer.footer {
-    .footer-container {
+    .copyring {
       flex-direction: column-reverse;
-      gap: 0.5rem;
-      text-align: center;
 
-      .copyring {
-        flex-direction: column;
-        gap: 0.4rem;
-
-        small {
-          &:first-child {
-            border-right: none;
-          }
+      small {
+        &:nth-child(2) {
+          display: none;
         }
       }
     }
