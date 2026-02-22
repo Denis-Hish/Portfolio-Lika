@@ -8,7 +8,7 @@
       "nav.about": "Про мене",
       "nav.education": "Освіта",
       "nav.services": "Послуги",
-      "nav.contacts": "Контакти",
+      "nav.contacts": "Зв’язок",
 
       "hero.button": "Записатися на консультацію",
 
@@ -18,7 +18,12 @@
 
       "services.title": "Мої послуги",
 
-      "contacts.title": "Контакти"
+      "contacts.title": "Питання та запис",
+      "contacts.name": "Ім'я",
+      "contacts.email": "Електронна пошта",
+      "contacts.phone": "Телефон",
+      "contacts.message": "Повідомлення",
+      "contacts.send": "Відправити"
     }
   },
   "pl": {
@@ -30,7 +35,7 @@
       "nav.about": "O mnie",
       "nav.education": "Edukacja",
       "nav.services": "Usługi",
-      "nav.contacts": "Kontakty",
+      "nav.contacts": "Komunikacja",
 
       "hero.button": "Umów się na konsultację",
 
@@ -40,7 +45,12 @@
 
       "services.title": "Moje usługi",
 
-      "contacts.title": "Kontakty"
+      "contacts.title": "Pytania i zapisy",
+      "contacts.name": "Imię",
+      "contacts.email": "E-mail",
+      "contacts.phone": "Telefon",
+      "contacts.message": "Wiadomość",
+      "contacts.send": "Wyślij"
     }
   }
 }

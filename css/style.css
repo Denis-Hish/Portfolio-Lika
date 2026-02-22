@@ -16,6 +16,11 @@ body {
   font-family: var(--font-text);
 }
 
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 h1,
 h2,
 h3,
@@ -183,10 +188,13 @@ header.header {
     gap: 1rem;
 
     .logo {
+      flex: 1;
+
       a {
         font-family: var(--font-title);
         font-style: italic;
         font-size: 1.25em;
+        white-space: nowrap;
       }
     }
 
@@ -213,6 +221,9 @@ header.header {
     }
 
     .nav-language {
+      flex: 1;
+      justify-items: end;
+
       .language-switcher {
         .lang-btn {
           padding: 0 8px;

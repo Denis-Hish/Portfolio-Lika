@@ -231,6 +231,16 @@
       }
     }
   }
+
+  section.contacts {
+    .contacts-container {
+      .item.form {
+        #form {
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
 }
 
 /* Only PC */
