@@ -284,10 +284,11 @@
 /* Mobile */
 @media (max-width: 767px) {
   .swiper-shell {
-    --position-navigation-btn: -18px;
+    --position-navigation-btn: -10px;
 
     [class^='swiper-button'] {
       padding: 14px;
+      width: auto;
       background-color: initial;
       box-shadow: none;
 
@@ -455,7 +456,7 @@
   transition: all var(--duration);
   outline: none;
   pointer-events: none;
-  z-index: 99;
+  z-index: 9;
 
   .icon {
     stroke: var(--color-white);
@@ -465,7 +466,7 @@
   }
 
   &.visible {
-    opacity: 0.5;
+    opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 
@@ -482,10 +483,20 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 767px) {
   .scroll-to-top {
     right: 10px;
     bottom: 30px;
+  }
+}
+
+/* Only PC */
+@media (hover: hover) and (pointer: fine) {
+  .scroll-to-top {
+    &.visible {
+      opacity: 0.5;
+    }
   }
 }
 
