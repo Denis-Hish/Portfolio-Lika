@@ -164,11 +164,11 @@ const swiper = new Swiper('.swiper', {
   },
 
   autoplay: {
-    delay: 9000,
+    delay: 7000,
     disableOnInteraction: false, // после взаимодействия автоплей продолжит работать
     pauseOnMouseEnter: true,
   },
-  speed: 1200,
+  speed: 800,
 
   // Pagination
   pagination: {

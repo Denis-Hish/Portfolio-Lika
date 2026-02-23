@@ -164,7 +164,7 @@
 
   footer.footer {
     .copyring {
-      flex-direction: column-reverse;
+      flex-direction: column;
 
       small {
         &:nth-child(2) {

@@ -28,6 +28,7 @@ fetch('./language/lang.json')
       .then(() => {
         updateContent(); // обновляем текст после инициализации
         updateLanguageButtons(); // устанавливаем активную кнопку языка
+        lucide.createIcons();
       });
   })
   .catch(error => {
@@ -75,5 +76,6 @@ window.changeLanguage = function (lng) {
   i18next.changeLanguage(lng, () => {
     updateContent();
     updateLanguageButtons();
+    lucide.createIcons();
   });
 };
