@@ -18,10 +18,12 @@
       cursor: pointer;
 
       .icon {
+        --icon-size: 42px;
+
         stroke: var(--color-primary);
         stroke-width: 1px;
-        width: 44px;
-        height: 44px;
+        width: var(--icon-size);
+        height: var(--icon-size);
 
         font-size: 50px;
         font-variation-settings: 'wght' 100;
@@ -57,9 +59,9 @@
       .link {
         background-color: var(--color-background);
 
-        .icon {
-          /* stroke: var(--color-text-light); */
-        }
+        /* .icon {
+          stroke: var(--color-text-light);
+        } */
         .title {
           color: var(--color-text-dark);
         }
@@ -498,40 +500,6 @@
     &.visible {
       opacity: 0.5;
     }
-  }
-}
-
-/* ---------- PULSED BUTTON EFFECT ---------- */
-.btn-pulsed {
-  --size-pulsed-circle: 250px;
-  --animation-duration: 0.2s;
-
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-
-  span {
-    position: absolute;
-    background: #eee;
-    width: var(--size-pulsed-circle);
-    height: var(--size-pulsed-circle);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulsed var(--animation-duration) linear infinite;
-    pointer-events: none;
-  }
-}
-
-@keyframes pulsed {
-  from {
-    width: 0;
-    height: 0;
-    opacity: 0.25;
-  }
-  to {
-    width: var(--size-pulsed-circle);
-    height: var(--size-pulsed-circle);
-    opacity: 0;
   }
 }
 

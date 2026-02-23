@@ -108,10 +108,11 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 
-  &:first-of-type {
+  /* &:first-of-type {
     scroll-margin-top: var(--header-height);
-  }
+  } */
 
   &:nth-child(even) {
     background-color: var(--color-white);

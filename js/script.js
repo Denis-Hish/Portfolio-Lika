@@ -1,5 +1,17 @@
 'use strict';
 
+// Фикс: при перезагрузке с якорем #home оставляем страницу в самом верху, чтобы браузер не восстанавливал/не смещал скролл вниз.
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+if (window.location.hash === '#home') {
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+  });
+}
+
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -320,31 +332,14 @@ if (phoneInput && window.IMask) {
   });
 })();
 
-//* ---------- PULSED BUTTON EFFECT ---------- *//
-const btn = document.querySelectorAll('.btn-pulsed');
-
-btn.forEach(btn => {
-  btn.addEventListener('click', e => {
-    const x = e.pageX - e.target.offsetLeft;
-    const y = e.pageY - e.target.offsetTop;
-    const pulsed = document.createElement('span');
-
-    pulsed.style.left = x + 'px';
-    pulsed.style.top = y + 'px';
-    e.target.appendChild(pulsed);
-
-    // Getting the duration of animation from CSS
-    const animationDuration = getComputedStyle(pulsed).animationDuration;
-    const animationTime = parseFloat(animationDuration) * 1000;
-
-    setTimeout(() => {
-      pulsed.remove();
-    }, animationTime);
-  });
-});
-
 //* ---------- LUCIDE ICONS ---------- *//
 lucide.createIcons();
 
 //* ---------- Animate On Scroll Library ---------- *//
-AOS.init();
+AOS.init({
+  // disable: () => window.innerWidth <= 1024,
+  startEvent: 'DOMContentLoaded',
+  mirror: true,
+});
+
+console.log(window.innerWidth);
