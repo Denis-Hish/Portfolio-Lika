@@ -47,14 +47,8 @@
       &:hover {
         background-color: var(--color-background);
 
-        .icon {
-          stroke: var(--color-text-light);
-        }
         .title {
           color: var(--color-text-dark);
-        }
-        .chevron {
-          stroke: var(--color-text-light);
         }
       }
     }
@@ -64,7 +58,7 @@
         background-color: var(--color-background);
 
         .icon {
-          stroke: var(--color-text-light);
+          /* stroke: var(--color-text-light); */
         }
         .title {
           color: var(--color-text-dark);
@@ -72,7 +66,7 @@
         .chevron {
           transform: rotate(180deg);
           /* transform: scaleY(-1); */
-          stroke: var(--color-text-light);
+          /* stroke: var(--color-text-light); */
         }
       }
     }
@@ -207,12 +201,6 @@
 
           &:hover {
             box-shadow: var(--shadow-lg);
-            .icon-container {
-              border: 1px solid var(--color-text-light);
-              .icon {
-                stroke: var(--color-text-light);
-              }
-            }
           }
         }
       }

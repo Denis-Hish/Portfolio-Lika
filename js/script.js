@@ -345,3 +345,6 @@ btn.forEach(btn => {
 
 //* ---------- LUCIDE ICONS ---------- *//
 lucide.createIcons();
+
+//* ---------- Animate On Scroll Library ---------- *//
+AOS.init();

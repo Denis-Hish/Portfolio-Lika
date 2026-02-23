@@ -22,6 +22,11 @@
 	<script src="./assets/swiper-bundle.min.js" defer></script>
 	<!-- IMask -->
 	<script src="./assets/imask.js" defer></script>
+
+	<!-- Animate On Scroll Library -->
+	<link rel="stylesheet" href="./assets/aos.css">
+	<script src="./assets/aos.js" defer></script>
+
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/queries.css">
@@ -71,16 +76,18 @@
 	<section id="home" class="hero">
 		<div class="container">
 			<div class="hero-container">
-				<div class="item image">
+				<div class="item image" data-aos="fade-up">
 					<img src="./img/woman_1.png" alt="Hero image">
 				</div>
 				<div class="item content">
-					<h1 class="title" data-translate="fullname">Лідія Андрійчук</h1>
-					<h3 class="subtitle">Психолог, психотерапевт</h3>
-					<span class="divider divider-lg"></span>
-					<p>Допомагаю знайти внутрішню гармонію та впоратися з життєвими труднощами. Індивідуальний підхід до кожного
+					<h1 class="title" data-translate="fullname" data-aos="fade-left" data-aos-delay="300">Лідія Андрійчук</h1>
+					<h3 class="subtitle" data-aos="fade-left" data-aos-delay="600">Психолог, психотерапевт</h3>
+					<span class="divider divider-lg" data-aos="fade-left" data-aos-delay="600"></span>
+					<p data-aos="fade-left" data-aos-delay="900">Допомагаю знайти внутрішню гармонію та впоратися з життєвими
+						труднощами. Індивідуальний підхід до кожного
 						клієнта, заснований на доказових методах психотерапії.</p>
-					<a href="#contacts" class="btn btn-primary btn-pulsed" data-translate="hero.button">Записатися на
+					<a href="#contacts" class="btn btn-primary btn-pulsed" data-translate="hero.button" data-aos="fade-up"
+						data-aos-delay="1200">Записатися на
 						консультацію</a>
 				</div>
 			</div>

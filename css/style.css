@@ -440,6 +440,7 @@ footer.footer {
         width: var(--icon-size);
         height: var(--icon-size);
         fill: var(--color-text-light);
+        /* fill: var(--color-primary); */
         transition: all var(--duration);
 
         /* Only Mobile */
