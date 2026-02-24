@@ -465,7 +465,7 @@ footer.footer {
         transition: all var(--duration);
 
         /* Only Mobile */
-        @media (any-hover: none) and (any-pointer: coarse) {
+        @media (any-pointer: coarse) {
           fill: var(--clr);
         }
       }

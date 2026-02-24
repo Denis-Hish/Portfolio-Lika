@@ -70,7 +70,7 @@
       .nav-language.mobile {
         display: flex;
         position: absolute;
-        bottom: 40px;
+        bottom: 60px;
       }
 
       .nav-toggle-btn {
