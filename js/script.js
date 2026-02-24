@@ -16,6 +16,9 @@ const navToggle = document.getElementById('navToggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const langBtns = document.querySelectorAll('.lang-btn');
+const header = document.querySelector('.header');
+const heroSection = document.querySelector('section.hero');
+let heroObserver;
 
 //* ----------------- Высота header ----------------- *//
 function updateHeaderHeight() {
@@ -28,12 +31,43 @@ function updateHeaderHeight() {
 
 updateHeaderHeight();
 
+// изменение прозрачности header при скролле
+function setupHeaderObserver() {
+  if (!header) return;
+  if (!heroSection) {
+    header.classList.add('is-solid');
+    return;
+  }
+  if (heroObserver) {
+    heroObserver.disconnect();
+  }
+  heroObserver = new IntersectionObserver(
+    entries => {
+      const [entry] = entries;
+      header.classList.toggle('is-solid', !entry.isIntersecting);
+    },
+    {
+      threshold: 0,
+      rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+    },
+  );
+  heroObserver.observe(heroSection);
+}
+
+setupHeaderObserver();
+
 // И при изменении размера окна
-window.addEventListener('resize', updateHeaderHeight);
+window.addEventListener('resize', () => {
+  updateHeaderHeight();
+  setupHeaderObserver();
+});
 
 // если header может изменяться по другим причинам
 // (шрифты загрузились, контент добавился и т.п.)
-window.addEventListener('load', updateHeaderHeight);
+window.addEventListener('load', () => {
+  updateHeaderHeight();
+  setupHeaderObserver();
+});
 
 //* ------- Переключение меню на мобильных устройствах ------- *//
 navToggle.addEventListener('click', () => {
