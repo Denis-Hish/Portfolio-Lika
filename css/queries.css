@@ -143,6 +143,58 @@
           }
         }
       }
+
+      /* ---------- ANIMATION MOBILE MENU ITEMS ---------- */
+      .nav-menu {
+        --step: 50ms;
+        --duration: 0.4s;
+
+        li {
+          transform: translateX(200%);
+          opacity: 0;
+          transition:
+            transform var(--duration) ease-in,
+            opacity var(--duration) ease-in;
+
+          /* language buttons */
+          &:nth-child(6) {
+            transform: translateY(100px);
+          }
+        }
+      }
+
+      .nav-menu.open {
+        li {
+          transform: translateX(0);
+          opacity: 1;
+
+          &:nth-child(1) {
+            transition-delay: calc(var(--step) * 1);
+          }
+
+          &:nth-child(2) {
+            transition-delay: calc(var(--step) * 2);
+          }
+
+          &:nth-child(3) {
+            transition-delay: calc(var(--step) * 3);
+          }
+
+          &:nth-child(4) {
+            transition-delay: calc(var(--step) * 4);
+          }
+
+          &:nth-child(5) {
+            transition-delay: calc(var(--step) * 5);
+          }
+
+          /* language buttons */
+          &:nth-child(6) {
+            transition-delay: calc(var(--step) * 10);
+            transform: translateY(0);
+          }
+        }
+      }
     }
   }
 
