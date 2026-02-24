@@ -51,9 +51,11 @@
         align-items: center;
         transition: right var(--duration);
         gap: 2.5rem;
+        pointer-events: none;
 
         &.open {
           right: 0;
+          pointer-events: auto;
         }
 
         .nav-link {

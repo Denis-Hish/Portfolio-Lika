@@ -1,16 +1,16 @@
 'use strict';
 
 // Фикс: при перезагрузке с якорем #home оставляем страницу в самом верху, чтобы браузер не восстанавливал/не смещал скролл вниз.
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
+// if ('scrollRestoration' in history) {
+//   history.scrollRestoration = 'manual';
+// }
 
-if (window.location.hash === '#home') {
-  window.scrollTo(0, 0);
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-  });
-}
+// if (window.location.hash === '#home') {
+//   window.scrollTo(0, 0);
+//   window.addEventListener('load', () => {
+//     window.scrollTo(0, 0);
+//   });
+// }
 
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -341,5 +341,3 @@ AOS.init({
   startEvent: 'DOMContentLoaded',
   mirror: true,
 });
-
-console.log(window.innerWidth);

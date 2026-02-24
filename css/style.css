@@ -172,6 +172,26 @@ section {
   }
 }
 
+.divider-title {
+  position: relative;
+  margin-bottom: 3.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 25%;
+    background-color: var(--color-secondary);
+    left: 50%;
+    bottom: -1.5rem;
+    transform: translateX(-50%);
+
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+  }
+}
+
 /* ---------- HEADER ---------- */
 header.header {
   position: fixed;
