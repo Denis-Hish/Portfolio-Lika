@@ -18,7 +18,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 const langBtns = document.querySelectorAll('.lang-btn');
 const header = document.querySelector('.header');
 const heroSection = document.querySelector('section.hero');
-let heroObserver;
 
 //* ----------------- Высота header ----------------- *//
 function updateHeaderHeight() {
@@ -31,8 +30,9 @@ function updateHeaderHeight() {
 
 updateHeaderHeight();
 
-// изменение прозрачности header при скролле
+//*  ---- Изменение прозрачности header при скролле ---- *//
 function setupHeaderObserver() {
+  let heroObserver;
   if (!header) return;
   if (!heroSection) {
     header.classList.add('is-solid');
@@ -85,7 +85,7 @@ navLinks.forEach(link => {
   });
 });
 
-// Переключение языков
+//* ------------------- Переключение языков ------------------- *//
 langBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const lang = btn.getAttribute('data-lang');
@@ -97,7 +97,7 @@ langBtns.forEach(btn => {
   });
 });
 
-//* ---------- Активная ссылка при скролле ---------- *//
+//* --------------- Активная ссылка при скролле --------------- *//
 const sections = document.querySelectorAll('section[id]');
 
 function setActiveNavLink() {
@@ -133,7 +133,7 @@ window.addEventListener('scroll', setActiveNavLink);
 // Вызываем один раз при загрузке страницы
 window.addEventListener('load', setActiveNavLink);
 
-//* ---------- Scroll to top button ---------- *//
+//* ------------------- Scroll to top button ------------------- *//
 const scrollToTopBtn = document.getElementById('scrollToTop');
 
 window.addEventListener('scroll', () => {
@@ -151,7 +151,7 @@ scrollToTopBtn.addEventListener('click', () => {
   });
 });
 
-//* ----------------- Accordion ----------------- *//
+//* ------------------------- Accordion ------------------------- *//
 document.addEventListener('DOMContentLoaded', () => {
   class Accordion {
     constructor(el) {
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new Accordion(document.getElementById('accordion'), false);
 });
 
-//* ----------------- SWIPER SLIDER ----------------- *//
+//* ------------------------ SWIPER SLIDER ------------------------ *//
 const progressCircle = document.querySelector('.autoplay-progress svg');
 const progressContent = document.querySelector('.autoplay-progress span');
 
@@ -258,7 +258,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-//* ------------ IMask Маска номера телефона ------------ *//
+//* --------------- IMask Маска номера телефона --------------- *//
 const phoneInput = document.getElementById('phone');
 
 if (phoneInput && window.IMask) {
@@ -285,7 +285,7 @@ if (phoneInput && window.IMask) {
   });
 }
 
-//* ----------------- Web3Form ----------------- *//
+//* ------------------------- Web3Form ------------------------- *//
 (function () {
   const forms = document.querySelectorAll('.needs-validation');
 
@@ -366,10 +366,10 @@ if (phoneInput && window.IMask) {
   });
 })();
 
-//* ---------- LUCIDE ICONS ---------- *//
+//* --------------------- LUCIDE ICONS --------------------- *//
 lucide.createIcons();
 
-//* ---------- Animate On Scroll Library ---------- *//
+//* -------------- Animate On Scroll Library -------------- *//
 AOS.init({
   // disable: () => window.innerWidth <= 1024,
   startEvent: 'DOMContentLoaded',

@@ -270,7 +270,7 @@
   section.about {
     .about-container {
       flex-direction: column;
-      gap: 1rem;
+      /* gap: 1rem; */
 
       .item {
         flex: 1;

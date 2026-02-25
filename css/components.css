@@ -420,11 +420,11 @@
   display: block;
 }
 
-#form.was-validated .form-group :invalid {
+#form.was-validated .form-groups .form-group :invalid {
   border-color: var(--color-error);
 }
 
-#form.was-validated .form-group :valid {
+#form.was-validated .form-groups .form-group :valid {
   border-color: var(--color-success);
 }
 
@@ -495,13 +495,13 @@
 }
 
 /* Only PC */
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
   .scroll-to-top {
     &.visible {
       opacity: 0.5;
     }
   }
-}
+} */
 
 /* ---------- TOOLTIP ---------- */
 /* Only PC */
