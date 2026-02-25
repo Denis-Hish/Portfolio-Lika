@@ -23,9 +23,13 @@
 
       "contacts.title": "Питання та запис",
       "contacts.name": "Ім'я",
+      "contacts.name.error": "Будь ласка, вкажіть своє ім'я",
       "contacts.email": "Електронна пошта",
+      "contacts.email.error": "Будь ласка, вкажіть коректну електронну пошту",
       "contacts.phone": "Телефон",
+      "contacts.phone.error": "Будь ласка, вкажіть коректний номер телефону",
       "contacts.message": "Повідомлення",
+      "contacts.message.error": "Будь ласка, напишіть повідомлення",
       "contacts.send": "Відправити",
       "contacts.social": "Також можете надіслати повідомлення через:"
     }
@@ -54,9 +58,13 @@
 
       "contacts.title": "Pytania i zapisy",
       "contacts.name": "Imię",
+      "contacts.name.error": "Proszę podać swoje imię",
       "contacts.email": "E-mail",
+      "contacts.email.error": "Proszę podać poprawny adres e-mail",
       "contacts.phone": "Telefon",
+      "contacts.phone.error": "Proszę podać poprawny numer telefonu",
       "contacts.message": "Wiadomość",
+      "contacts.message.error": "Proszę napisać wiadomość",
       "contacts.send": "Wyślij",
       "contacts.social": "Możesz również wysłać wiadomość przez:"
     }

@@ -311,7 +311,7 @@
   .form-groups {
     display: flex;
     flex-direction: column;
-    gap: 1.625rem;
+    gap: 2rem;
     margin-bottom: 1.5rem;
 
     .form-group {
@@ -327,7 +327,6 @@
         border-radius: var(--rounded-sm);
         color: var(--color-text-dark);
         transition: all var(--duration);
-        /* margin-bottom: 30px; */
       }
 
       span {
