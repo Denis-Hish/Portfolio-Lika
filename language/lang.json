@@ -31,6 +31,9 @@
       "contacts.message": "Повідомлення",
       "contacts.message.error": "Будь ласка, напишіть повідомлення",
       "contacts.send": "Відправити",
+      "contacts.send.sending": "Відправлення...",
+      "contacts.send.success": "Ваше повідомлення успішно відправлено!",
+      "contacts.send.error": "Сталася помилка. Спробуйте ще раз.",
       "contacts.social": "Також можете надіслати повідомлення через:"
     }
   },
@@ -66,6 +69,9 @@
       "contacts.message": "Wiadomość",
       "contacts.message.error": "Proszę napisać wiadomość",
       "contacts.send": "Wyślij",
+      "contacts.send.sending": "Wysyłanie…",
+      "contacts.send.success": "Twoja wiadomość została pomyślnie wysłana!",
+      "contacts.send.error": "Wystąpił błąd. Spróbuj ponownie.",
       "contacts.social": "Możesz również wysłać wiadomość przez:"
     }
   }

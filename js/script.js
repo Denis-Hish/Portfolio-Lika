@@ -289,6 +289,13 @@ if (phoneInput && window.IMask) {
 (function () {
   const forms = document.querySelectorAll('.needs-validation');
 
+  const t = (key, fallback) => {
+    if (window.i18next && typeof window.i18next.t === 'function') {
+      return window.i18next.t(key);
+    }
+    return fallback;
+  };
+
   Array.prototype.slice.call(forms).forEach(form => {
     const submitBtn = form.querySelector('button[type="submit"]');
     const statusEl = document.getElementById('form-status');
@@ -321,10 +328,10 @@ if (phoneInput && window.IMask) {
       });
 
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.textContent = t('contacts.send.sending', 'Відправлення...'); // текст на кнопке во время отправки формы
       submitBtn.disabled = true;
 
-      statusEl.textContent = 'Відправлення...';
+      statusEl.textContent = t('contacts.send.sending', 'Відправлення...'); // текст в статусе во время отправки формы
       statusEl.classList.remove('hidden', 'error', 'success');
 
       try {
@@ -340,17 +347,24 @@ if (phoneInput && window.IMask) {
         const data = await response.json();
 
         if (response.ok) {
-          statusEl.textContent = 'Ваше повідомлення успішно відправлено!';
+          statusEl.textContent = t(
+            'contacts.send.success',
+            'Ваше повідомлення успішно відправлено!',
+          );
           statusEl.classList.add('success');
           form.reset();
           form.classList.remove('was-validated');
         } else {
           statusEl.textContent =
-            data.message || 'Сталася помилка. Спробуйте ще раз.';
+            data.message ||
+            t('contacts.send.error', 'Сталася помилка. Спробуйте ще раз.');
           statusEl.classList.add('error');
         }
       } catch (error) {
-        statusEl.textContent = 'Сталася помилка. Спробуйте ще раз.';
+        statusEl.textContent = t(
+          'contacts.send.error',
+          'Сталася помилка. Спробуйте ще раз.',
+        );
         statusEl.classList.add('error');
       } finally {
         submitBtn.textContent = originalText;
