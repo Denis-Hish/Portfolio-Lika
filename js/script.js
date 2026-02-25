@@ -385,10 +385,7 @@ lucide.createIcons();
 
 //* -------------- Animate On Scroll Library -------------- *//
 AOS.init({
-  // disable: () => window.innerWidth <= 1024,
-  // startEvent: 'DOMContentLoaded', // событие, при котором запускается инициализация AOS (по умолчанию DOMContentLoaded)
-  offset: 100, // смещение в пикселях от точки триггера
-  once: false, // true — анимация срабатывает только один раз при первом входе в зону видимости
-  mirror: true, // true — запускается обратная анимация (исчезновение), когда элемент выходит из зоны видимости вверх
-  anchorPlacement: 'top-bottom', // начало элемента / начало окна
+  offset: 100,
+  once: false,
+  mirror: true,
 });
