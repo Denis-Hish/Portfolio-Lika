@@ -386,11 +386,11 @@ section.hero {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../img/hero-bg-4-full.jpg');
+    background-image: url('../img/hero-bg-1-full.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    transform: scaleX(-1);
+    /* transform: scaleX(-1); */
   }
 
   /* Overlay */
