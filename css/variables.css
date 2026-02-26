@@ -8,10 +8,11 @@
   --color-text-light: #5a5a5a; /* Secondary text */
 
   --color-primary: #9badb7; /* Muted Blue */
-  --color-primary: #e4475b;
   --color-primary: #00bcff; /* Sky 400 */
-  --color-primary: #aa8c74;
+  --color-primary: #e4475b;
   --color-primary: #bf895d;
+
+  /* --color-primary: #f2b310; */
 
   --color-secondary: #e8ddd3; /* Soft Beige */
 

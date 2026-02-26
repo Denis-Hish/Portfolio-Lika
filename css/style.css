@@ -379,16 +379,22 @@ section.hero {
   /* padding-bottom: 0; */
   /* padding-top: calc(1rem + var(--header-height)); */
   /* margin-top: var(--header-height); */
-
   min-height: 100vh;
 
-  background-image: url('../img/2149927551-full.jpg');
-  /* background-image: url('../img/2149927565-full.jpg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  /* Background image */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/hero-bg-4-full.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    transform: scaleX(-1);
+  }
 
-  &:before {
+  /* Overlay */
+  &::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -652,6 +658,7 @@ footer.footer {
     #ce9f56 57%,
     #4e341c 70%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
