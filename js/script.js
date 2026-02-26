@@ -31,43 +31,37 @@ function updateHeaderHeight() {
 updateHeaderHeight();
 
 //*  ---- Изменение прозрачности header при скролле ---- *//
-function setupHeaderObserver() {
-  let heroObserver;
+function updateHeaderSolidState() {
   if (!header) return;
+
   if (!heroSection) {
     header.classList.add('is-solid');
     return;
   }
-  if (heroObserver) {
-    heroObserver.disconnect();
-  }
-  heroObserver = new IntersectionObserver(
-    entries => {
-      const [entry] = entries;
-      header.classList.toggle('is-solid', !entry.isIntersecting);
-    },
-    {
-      threshold: 0,
-      rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
-    },
-  );
-  heroObserver.observe(heroSection);
-}
 
-setupHeaderObserver();
+  const threshold = Math.max(heroSection.offsetHeight - header.offsetHeight, 0);
+  header.classList.toggle('is-solid', window.scrollY >= threshold);
+}
+updateHeaderSolidState();
 
 // И при изменении размера окна
 window.addEventListener('resize', () => {
   updateHeaderHeight();
-  setupHeaderObserver();
+  updateHeaderSolidState();
 });
 
 // если header может изменяться по другим причинам
 // (шрифты загрузились, контент добавился и т.п.)
 window.addEventListener('load', () => {
   updateHeaderHeight();
-  setupHeaderObserver();
+  updateHeaderSolidState();
 });
+
+window.addEventListener('hashchange', () => {
+  requestAnimationFrame(updateHeaderSolidState);
+});
+
+window.addEventListener('scroll', updateHeaderSolidState);
 
 //* ------- Переключение меню на мобильных устройствах ------- *//
 navToggle.addEventListener('click', () => {
@@ -385,7 +379,7 @@ lucide.createIcons();
 
 //* -------------- Animate On Scroll Library -------------- *//
 AOS.init({
-  offset: 100,
+  offset: 80,
   once: false,
   mirror: true,
 });
