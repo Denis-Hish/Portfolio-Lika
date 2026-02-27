@@ -191,6 +191,7 @@ textarea {
 }
 
 section {
+  position: relative;
   padding: 7rem 0;
   /* scroll-margin-top: var(--header-height); */
   /* min-height: calc(100vh - var(--header-height)); */
@@ -372,7 +373,7 @@ section.hero {
     /* transform: scaleX(-1); */
   }
 
-  /* Overlay */
+  /* Background overlay */
   &::after {
     content: '';
     position: absolute;
