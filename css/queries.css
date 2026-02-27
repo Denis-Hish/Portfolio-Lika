@@ -82,6 +82,7 @@
         position: relative;
         width: var(--btn-size);
         height: var(--btn-size);
+        background-color: initial;
         z-index: 100;
         cursor: pointer;
 
@@ -329,5 +330,14 @@
         }
       }
     }
+  }
+}
+
+/* для людей с проблемами вестибулярного аппарата */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

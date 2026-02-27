@@ -66,7 +66,7 @@ window.addEventListener('scroll', updateHeaderSolidState);
 //* ------- Переключение меню на мобильных устройствах ------- *//
 navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('open');
-  navMenu.classList.toggle('open'); // Добавляем класс к меню
+  navMenu.classList.toggle('open');
   document.body.classList.toggle('menu-open');
 });
 
