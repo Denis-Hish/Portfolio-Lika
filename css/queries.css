@@ -232,6 +232,10 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+  section {
+    padding: 5rem 0;
+  }
+
   /* ---------- HERO SECTION ---------- */
   section.hero {
     /* padding: calc(1rem + var(--header-height)) 0; */
