@@ -198,8 +198,6 @@ const progressContent = document.querySelector('.autoplay-progress span');
 const swiper = new Swiper('.swiper', {
   // Parameters
   loop: true,
-  touchStartPreventDefault: false,
-  touchMoveStopPropagation: false,
   // mousewheel: true,
   keyboard: {
     enabled: true,

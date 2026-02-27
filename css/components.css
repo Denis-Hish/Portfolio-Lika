@@ -137,7 +137,6 @@
 
   .swiper {
     position: relative;
-    touch-action: pan-y;
 
     .swiper-wrapper {
       align-items: stretch;
@@ -154,7 +153,6 @@
           display: flex;
           align-items: center;
           flex-direction: column;
-          touch-action: pan-y;
           padding: 2rem 1rem;
           margin: 20px;
           background-color: var(--color-white);
