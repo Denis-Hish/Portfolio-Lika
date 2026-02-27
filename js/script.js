@@ -383,3 +383,15 @@ AOS.init({
   once: false,
   mirror: true,
 });
+
+/* Отключение фокусировки на элементах по Tab */
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab') {
+    const focusableElements = document.querySelectorAll(
+      '.swiper-pagination-bullet',
+    );
+    focusableElements.forEach(el => {
+      el.setAttribute('tabindex', '-1');
+    });
+  }
+});
