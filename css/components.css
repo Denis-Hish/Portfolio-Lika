@@ -263,6 +263,18 @@
       color: var(--color-white);
       box-shadow: var(--shadow-md);
     }
+
+    &.btn-gold {
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+
+      svg {
+        color: var(--color-primary);
+      }
+
+      &:hover {
+        background-color: var(--color-white);
+      }
+    }
   }
 
   .swiper-button-prev {

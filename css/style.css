@@ -524,7 +524,6 @@ section.contacts {
 
             width: var(--icon-size);
             height: var(--icon-size);
-            /* fill: var(--color-text-light); */
             fill: var(--color-primary);
             transition:
               fill var(--duration),
