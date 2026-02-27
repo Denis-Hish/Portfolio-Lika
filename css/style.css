@@ -643,6 +643,8 @@ footer.footer {
 
   &:active {
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+    transition: transform 0s;
 
     &::before {
       --gold-angle: 5deg;
@@ -650,8 +652,8 @@ footer.footer {
   }
 }
 
-.btn-primary.btn-gold {
-}
+/* .btn-primary.btn-gold {
+} */
 
 .btn-secondary.btn-gold {
   color: var(--color-text-dark);
@@ -686,21 +688,7 @@ footer.footer {
   }
 }
 
-.gold-icon {
-  fill: #ce9f56;
-  filter: drop-shadow(0 1px 0 #81522e) drop-shadow(0 -1px 0 #e6c16a)
-    drop-shadow(0 0 2px rgba(0, 0, 0, 0.25));
-  transition:
-    filter var(--duration),
-    fill var(--duration),
-    transform var(--duration);
-}
-
-.icon-link:hover .gold-icon {
-  fill: #e6c16a;
-  filter: drop-shadow(0 1px 0 #81522e) drop-shadow(0 -1px 0 #fff3c8)
-    drop-shadow(0 0 4px rgba(230, 193, 106, 0.35));
-}
+/* .gold-icon {} */
 
 /* Glass style */
 .glass {

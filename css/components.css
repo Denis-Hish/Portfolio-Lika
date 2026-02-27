@@ -207,6 +207,12 @@
             box-shadow: var(--shadow-lg);
             transform: translateY(-2px);
           }
+
+          &:active {
+            box-shadow: var(--shadow-md);
+            transform: translateY(0);
+            transition: none;
+          }
         }
       }
     }
