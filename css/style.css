@@ -145,6 +145,7 @@ img {
   padding: 0.8rem 1.6rem;
   border: none;
   text-transform: uppercase;
+  text-wrap: nowrap;
   border-radius: var(--rounded-full);
   transition:
     transform var(--duration),

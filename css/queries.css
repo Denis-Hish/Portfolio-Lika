@@ -239,6 +239,7 @@
   /* ---------- HERO SECTION ---------- */
   section.hero {
     /* padding: calc(1rem + var(--header-height)) 0; */
+    padding: 0;
 
     .hero-container {
       flex-direction: column;
