@@ -200,7 +200,7 @@ section {
   /* min-height: 100vh; */
   display: flex;
   align-items: center;
-  overflow-y: hidden;
+  overflow: hidden;
 
   &:not(:first-of-type) {
     scroll-margin-top: var(--header-height);
