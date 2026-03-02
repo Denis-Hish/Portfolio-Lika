@@ -540,6 +540,9 @@
   position: relative;
   overflow: hidden;
 
+  border-radius: var(--rounded-md);
+  padding: 2rem 1rem;
+
   &::before {
     content: '';
     position: absolute;

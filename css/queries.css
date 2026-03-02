@@ -199,6 +199,15 @@
     }
   }
 
+  /* ---------- HERO SECTION ---------- */
+  section.hero {
+    .hero-container {
+      .item {
+        margin: 0 auto;
+      }
+    }
+  }
+
   /* ---------- CONTACTS SECTION ---------- */
   section.contacts {
     .contacts-container {
@@ -238,8 +247,18 @@
 
   /* ---------- HERO SECTION ---------- */
   section.hero {
-    /* padding: calc(1rem + var(--header-height)) 0; */
     padding: 0;
+
+    /* Background image */
+    &::before {
+      background-position: -162px 0px;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
 
     .hero-container {
       flex-direction: column;
@@ -250,6 +269,7 @@
       }
 
       .content {
+        margin-top: 200px;
         flex-direction: column;
         justify-content: center;
 
@@ -262,13 +282,10 @@
           margin-bottom: 1rem;
         }
 
-        a {
+        /* a {
           margin-top: 1rem;
-        }
+        } */
       }
-
-      /* .image {
-      } */
     }
   }
 
