@@ -363,7 +363,7 @@ section.hero {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../img/hero-bg-1.jpg');
+    background-image: url('../img/hero-bg-2560.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
