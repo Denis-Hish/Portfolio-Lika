@@ -721,7 +721,6 @@ footer.footer {
 
   .icon {
     stroke: var(--color-white);
-    stroke: red;
     stroke-width: 1.5px;
     width: var(--icon-size);
     height: var(--icon-size);
@@ -735,7 +734,7 @@ footer.footer {
 
   &.btn-secondary {
     .icon {
-      stroke: var(--color-primary);
+      stroke: var(--color-text-dark);
     }
   }
 
