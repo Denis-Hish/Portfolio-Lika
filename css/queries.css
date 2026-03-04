@@ -17,23 +17,6 @@
     font-size: 1em;
   }
 
-  /* section {
-    padding: 6rem 0;
-  } */
-
-  /* .btn-primary,
-  .btn-secondary {
-    &:hover {
-      transform: translateY(0);
-      box-shadow: none;
-    }
-    &:active {
-      transform: translateY(0);
-      box-shadow: none;
-      transition: none;
-    }
-  } */
-
   /* ---------- HEADER ---------- */
   header.header {
     .nav {
@@ -45,7 +28,6 @@
         min-height: 100dvh;
         height: 100dvh;
         background-color: var(--color-white);
-        /* background-color: rgb(from #f08 r g b / 0.5); */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -112,14 +94,6 @@
             width: 50%;
           }
         }
-
-        /* &:hover {
-        span:nth-child(1),
-        span:nth-child(2),
-        span:nth-child(3) {
-          width: 100%;
-        }
-      } */
 
         &.open {
           span:nth-child(1) {
@@ -281,10 +255,6 @@
           text-align: center;
           margin-bottom: 1rem;
         }
-
-        /* a {
-          margin-top: 1rem;
-        } */
       }
     }
   }
@@ -293,7 +263,6 @@
   section.about {
     .about-container {
       flex-direction: column;
-      /* gap: 1rem; */
 
       .item {
         flex: 1;
@@ -355,7 +324,7 @@
   }
 }
 
-/* для людей с проблемами вестибулярного аппарата */
+/* Для людей с проблемами вестибулярного аппарата */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

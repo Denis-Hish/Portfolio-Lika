@@ -59,16 +59,12 @@
       .link {
         background-color: var(--color-background);
 
-        /* .icon {
-          stroke: var(--color-text-light);
-        } */
         .title {
           color: var(--color-text-dark);
         }
         .chevron {
           transform: rotate(180deg);
           /* transform: scaleY(-1); */
-          /* stroke: var(--color-text-light); */
         }
       }
     }
@@ -80,7 +76,7 @@
       overflow: hidden;
 
       .content {
-        padding: 1rem 7.2rem;
+        padding: 1rem 6rem;
 
         & > * {
           margin-bottom: 2px;
@@ -99,13 +95,6 @@
     }
   }
 }
-
-/* Tablet */
-/* @media (min-width: 1920px) {
-  .accordion {
-    max-width: 100%;
-  }
-} */
 
 /* Mobile */
 @media (max-width: 767px) {
@@ -411,7 +400,6 @@
   .form-status {
     color: var(--color-text-light);
     padding-bottom: 6px;
-    /* height: 30px; */
   }
 
   .form-status.success {
@@ -447,17 +435,6 @@
 #form.was-validated .form-groups .form-group :valid {
   border-color: var(--color-success);
 }
-
-/* Tablet */
-@media (max-width: 1024px) {
-}
-
-/* Mobile */
-/* @media (max-width: 767px) {
-  #form {
-    text-align: center;
-  }
-} */
 
 /* ---------- TOOLTIP ---------- */
 /* Only PC */
@@ -758,12 +735,3 @@
     bottom: 30px;
   }
 }
-
-/* Only PC */
-/* @media (hover: hover) and (pointer: fine) {
-  .scroll-to-top {
-    &.visible {
-      opacity: 0.5;
-    }
-  }
-} */
