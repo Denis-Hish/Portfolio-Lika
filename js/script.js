@@ -138,11 +138,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
-scrollToTopBtn.addEventListener('click', () => {
+scrollToTopBtn.addEventListener('click', e => {
+  e.preventDefault();
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
   });
+  e.target.blur(); // Убираем фокус с кнопки после клика
 });
 
 //* ------------------------- Accordion ------------------------- *//
