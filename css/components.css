@@ -573,12 +573,15 @@
     pointer-events: none;
   }
 
-  &:hover {
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
+  /* Only PC */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
 
-    &::before {
-      --gold-angle: 170deg;
+      &::before {
+        --gold-angle: 170deg;
+      }
     }
   }
 
@@ -727,20 +730,22 @@
     transform: translateY(0);
     pointer-events: auto;
 
-    &:hover {
-      opacity: 1;
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
+    /* Only PC */
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: 1;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
 
-      &.btn-gold {
-        &:hover {
-          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+        &.btn-gold {
+          &:hover {
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+          }
         }
       }
     }
 
     &:active {
-      box-shadow: initial;
       transform: translateY(0);
     }
   }

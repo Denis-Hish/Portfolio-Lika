@@ -154,9 +154,11 @@ img {
     box-shadow var(--duration);
   z-index: 1;
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
   }
 
   &:active {
@@ -540,10 +542,13 @@ section.contacts {
             }
           }
 
-          &:hover {
-            .icon {
-              fill: var(--clr);
-              transform: translateY(-2px);
+          /* Only PC */
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              .icon {
+                fill: var(--clr);
+                transform: translateY(-2px);
+              }
             }
           }
         }
