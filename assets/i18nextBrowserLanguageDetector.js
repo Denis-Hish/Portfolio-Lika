@@ -374,8 +374,8 @@
     order,
     lookupQuerystring: 'lng',
     lookupCookie: 'i18next',
-    lookupLocalStorage: 'i18nextLng',
-    lookupSessionStorage: 'i18nextLng',
+    lookupLocalStorage: 'language',
+    lookupSessionStorage: 'language',
     // cache user language
     caches: ['localStorage'],
     excludeCacheFor: ['cimode'],

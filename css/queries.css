@@ -27,7 +27,7 @@
         right: -100%;
         min-height: 100dvh;
         height: 100dvh;
-        background-color: var(--color-white);
+        background-color: var(--color-background-secondary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -45,15 +45,27 @@
         }
       }
 
-      .nav-language {
+      .nav-buttons {
         display: none;
       }
 
-      .nav-language.mobile {
+      .nav-buttons.mobile {
         display: flex;
+        flex-direction: column;
+        gap: 2rem;
         position: absolute;
         bottom: 60px;
       }
+
+      /* .nav-language {
+        display: none;
+      } */
+
+      /* .nav-language.mobile {
+        display: flex;
+        position: absolute;
+        bottom: 60px;
+      } */
 
       .nav-toggle-btn {
         --btn-size: 32px;
@@ -74,7 +86,7 @@
           position: absolute;
           right: 0;
           height: var(--line-height);
-          background-color: var(--color-text-dark);
+          background-color: var(--color-text-primary);
           border-radius: 50px;
           transition: all var(--duration);
 
@@ -125,15 +137,24 @@
         --duration: 0.4s;
 
         li {
+          text-align: center;
+          min-width: 200px;
           transform: translateX(200%);
           opacity: 0;
           transition:
             transform var(--duration) ease-in,
             opacity var(--duration) ease-in;
+        }
 
-          /* language buttons */
-          &:nth-child(6) {
-            transform: translateY(100px);
+        /* mobile buttons */
+        .nav-buttons.mobile {
+          .theme-toggle-btn,
+          .nav-language {
+            transform: translateY(200px);
+            opacity: 0;
+            transition:
+              transform var(--duration) ease-in,
+              opacity var(--duration) ease-in;
           }
         }
       }
@@ -162,11 +183,22 @@
           &:nth-child(5) {
             transition-delay: calc(var(--step) * 5);
           }
+        }
 
-          /* language buttons */
-          &:nth-child(6) {
-            transition-delay: calc(var(--step) * 10);
+        /* mobile buttons */
+        .nav-buttons.mobile {
+          .theme-toggle-btn,
+          .nav-language {
             transform: translateY(0);
+            opacity: 1;
+          }
+
+          .theme-toggle-btn {
+            transition-delay: calc(var(--step) * 10);
+          }
+
+          .nav-language {
+            transition-delay: calc(var(--step) * 11);
           }
         }
       }
@@ -178,6 +210,21 @@
     .hero-container {
       .item {
         margin: 0 auto;
+      }
+
+      .content {
+        margin-top: 250px;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+          font-style: italic;
+        }
+
+        .subtitle {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -242,7 +289,7 @@
         flex: 1;
       }
 
-      .content {
+      /* .content {
         margin-top: 200px;
         flex-direction: column;
         justify-content: center;
@@ -255,7 +302,7 @@
           text-align: center;
           margin-bottom: 1rem;
         }
-      }
+      } */
     }
   }
 
@@ -324,7 +371,7 @@
   }
 }
 
-/* Для людей с проблемами вестибулярного аппарата */
+/* For people with vestibular problems */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

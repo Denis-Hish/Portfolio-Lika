@@ -397,3 +397,54 @@ document.addEventListener('keydown', event => {
     });
   }
 });
+
+//* -------------- Dark mode -------------- *//
+const themeToggleBtn = document.querySelectorAll('.theme-toggle-btn');
+const THEME_STORAGE_KEY = 'theme';
+const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+function getSystemTheme() {
+  return themeMedia.matches ? 'dark' : 'light';
+}
+
+function getSavedTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch (_) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch (_) {}
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+const savedTheme = getSavedTheme();
+applyTheme(savedTheme || getSystemTheme());
+
+// Если пользователь еще не выбирал тему вручную — следим за системой
+if (!savedTheme) {
+  themeMedia.addEventListener('change', e => {
+    applyTheme(e.matches ? 'dark' : 'light');
+  });
+}
+
+themeToggleBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const current =
+      document.documentElement.getAttribute('data-theme') === 'dark'
+        ? 'dark'
+        : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    applyTheme(next);
+    saveTheme(next);
+    e.currentTarget.blur();
+  });
+});

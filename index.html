@@ -29,6 +29,7 @@
 	<!-- Basic styles -->
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/components.css">
+	<link rel="stylesheet" href="./css/dark-mode.css">
 	<link rel="stylesheet" href="./css/queries.css">
 	<script src="./js/script.js" defer></script>
 </head>
@@ -48,20 +49,34 @@
 					<li><a href="#services" class="nav-link" data-translate="nav.services">Послуги</a></li>
 					<li><a href="#contacts" class="nav-link" data-translate="nav.contacts">Зв’язок</a></li>
 
-					<!-- Языки в мобильном меню -->
-					<li class="nav-language mobile">
-						<div class="language-switcher">
+					<div class="nav-buttons mobile">
+						<!-- Переключение темы в мобильном меню -->
+						<button class="btn theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
+							<i data-lucide="moon" class="icon icon-moon"></i>
+							<i data-lucide="sun" class="icon icon-sun"></i>
+						</button>
+
+						<!-- Языки в мобильном меню -->
+						<div class="nav-language">
+							<div class="language-toggle">
+								<button class="btn lang-btn" data-lang="uk">UA</button>
+								<button class="btn lang-btn" data-lang="pl">PL</button>
+							</div>
+						</div>
+					</div>
+				</ul>
+
+				<div class="nav-buttons">
+					<div class="nav-language">
+						<div class="language-toggle">
 							<button class="btn lang-btn" data-lang="uk">UA</button>
 							<button class="btn lang-btn" data-lang="pl">PL</button>
 						</div>
-					</li>
-				</ul>
-
-				<div class="nav-language">
-					<div class="language-switcher">
-						<button class="btn lang-btn" data-lang="uk">UA</button>
-						<button class="btn lang-btn" data-lang="pl">PL</button>
 					</div>
+					<button class="btn theme-toggle-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
+						<i data-lucide="moon" class="icon icon-moon"></i>
+						<i data-lucide="sun" class="icon icon-sun"></i>
+					</button>
 				</div>
 
 				<button class="btn nav-toggle-btn" id="navToggle">

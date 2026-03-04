@@ -19,7 +19,7 @@ body {
 
 ::selection {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-background-secondary);
 }
 
 h1,
@@ -50,7 +50,7 @@ h3 {
 }
 
 p {
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -59,7 +59,7 @@ p {
   text-align: center;
   font-style: italic;
   letter-spacing: 1px;
-  color: var(--color-text-dark);
+  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -156,13 +156,13 @@ img {
 }
 
 .btn-primary {
-  color: var(--color-white);
+  color: var(--color-background-secondary);
   background-color: var(--color-primary);
   border: 2px solid transparent;
 }
 
 .btn-secondary {
-  background-color: var(--color-white);
+  background-color: var(--color-background-secondary);
   border: 2px solid var(--color-primary);
   transition:
     background-color var(--duration),
@@ -171,7 +171,7 @@ img {
 
   &:hover {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-background-secondary);
   }
 }
 
@@ -193,11 +193,11 @@ section {
   }
 
   &:nth-child(even) {
-    background-color: var(--color-white);
+    background-color: var(--color-background-primary);
   }
 
   &:nth-child(odd) {
-    background-color: var(--color-background);
+    background-color: var(--color-background-secondary);
   }
 }
 
@@ -235,7 +235,7 @@ header.header {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-background-secondary);
     opacity: 0.7;
     transition: opacity var(--duration);
     z-index: 0;
@@ -264,7 +264,7 @@ header.header {
         font-style: italic;
         font-size: 1.25em;
         white-space: nowrap;
-        color: var(--color-text-dark);
+        color: var(--color-text-primary);
       }
     }
 
@@ -276,7 +276,7 @@ header.header {
       .nav-link {
         position: relative;
         text-decoration: none;
-        color: var(--color-text-dark);
+        color: var(--color-text-primary);
         transition: color var(--duration);
         padding: 0.5rem 1.5rem;
 
@@ -290,11 +290,16 @@ header.header {
       }
     }
 
-    .nav-language {
+    .nav-buttons {
+      display: flex;
       flex: 1;
-      justify-items: end;
+      justify-content: end;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-      .language-switcher {
+    .nav-language {
+      .language-toggle {
         display: flex;
         align-items: center;
         gap: 0;
@@ -302,9 +307,9 @@ header.header {
         .lang-btn {
           display: block;
           padding: 0 8px;
-          color: var(--color-text-dark);
+          color: var(--color-text-primary);
           background-color: initial;
-          border-right: 1px solid var(--color-text-light);
+          border-right: 1px solid var(--color-text-secondary);
           transition: color var(--duration);
 
           @media (max-width: 992px) {
@@ -326,8 +331,7 @@ header.header {
       }
     }
 
-    .nav-language.mobile,
-    .nav-toggle-btn {
+    .nav-buttons.mobile {
       display: none;
     }
   }

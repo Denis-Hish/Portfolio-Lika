@@ -21,7 +21,7 @@ fetch('./language/lang.json')
         detection: {
           // порядок проверки языка
           order: ['localStorage', 'navigator', 'htmlTag'],
-          lookupLocalStorage: 'i18nextLng', // ключ в localStorage
+          lookupLocalStorage: 'language', // ключ в localStorage
           caches: ['localStorage'], // сохраняем выбор пользователя
         },
       })

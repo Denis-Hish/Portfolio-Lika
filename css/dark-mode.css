@@ -1,0 +1,55 @@
+/* Theme Toggle Button */
+header.header {
+  .nav {
+    .theme-toggle-btn {
+      --icon-size: 22px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: var(--color-text-primary);
+      padding: 0 0.5rem;
+      flex-shrink: 0;
+      transition: all var(--duration);
+
+      .icon {
+        width: var(--icon-size);
+        height: var(--icon-size);
+        stroke: currentColor;
+      }
+
+      .icon-moon {
+        display: none;
+      }
+
+      /* Only PC */
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+/* Dark mode styles */
+[data-theme='dark'] {
+  header.header {
+    .nav {
+      .theme-toggle-btn {
+        .icon-moon {
+          display: inline-block;
+        }
+
+        .icon-sun {
+          display: none;
+        }
+      }
+    }
+  }
+
+  footer.footer {
+    background-color: #0b1017;
+    color: #8b97a8;
+  }
+}
