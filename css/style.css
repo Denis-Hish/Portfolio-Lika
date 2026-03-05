@@ -53,6 +53,7 @@ p {
   color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1rem;
+  letter-spacing: 0.2px;
 }
 
 .title {
@@ -64,8 +65,6 @@ p {
 }
 
 .section-title {
-  /* font-family: var(--font-primary); */
-  /* letter-spacing: 2px; */
   font-size: 3rem;
 
   @media (max-width: 767px) {
@@ -111,6 +110,7 @@ p {
 
 a {
   text-decoration: none;
+  letter-spacing: 0.2px;
   color: inherit;
 }
 
@@ -403,6 +403,7 @@ section.hero {
         text-align: center;
         margin-bottom: 0;
         color: var(--color-white);
+        letter-spacing: 3px;
       }
 
       .title,
@@ -411,7 +412,7 @@ section.hero {
       }
 
       .divider {
-        margin: 0 auto;
+        margin: 0.5rem auto;
       }
 
       p {
@@ -423,7 +424,7 @@ section.hero {
 
       .wrapper {
         text-align: center;
-        margin: 1rem auto 0;
+        /* margin: 1rem auto 0; */
       }
     }
   }

@@ -217,13 +217,9 @@
         flex-direction: column;
         justify-content: center;
 
-        .title {
-          font-style: italic;
-        }
-
         .subtitle {
           text-align: center;
-          margin-bottom: 1rem;
+          letter-spacing: 0.9px;
         }
       }
     }
