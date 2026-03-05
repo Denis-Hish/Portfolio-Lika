@@ -1,8 +1,6 @@
 @import './fonts.css';
 @import './variables.css';
 
-/* TODO: Убрать все transition: all */
-
 * {
   margin: 0;
   padding: 0;
